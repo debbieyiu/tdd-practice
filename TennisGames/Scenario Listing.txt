@@ -1,0 +1,21 @@
+[]	0,0	Love All
+[]	0,1	Love Fifteen
+[]	1,0	Fifteen Love
+[]	1,1	Fifteen All
+[]	0,2	Love Thirty
+[]	1,2	Fifteen Thirty
+[]	2,2	Thirty All
+[]	2,0	Thirty Love
+[]	2,1	Thirty Fifteen
+[]	0,3	Love Forty
+[]	1,3	Fifteen Forty
+[]	2,3	Thirty Forty
+[]	3,3	Deuce
+[]	3,0	Forty Love
+[]	3,1	Forty Fifteen
+[]	3,2	Forty Thirty
+[]	0,4	Player2 Won
+[]	4,4	Deuce
+[]	4,0	Player1 Won
+[]	4,3	Player1 Advantage
+[]	3,4	Player2 Advantage
