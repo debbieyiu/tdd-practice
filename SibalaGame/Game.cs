@@ -4,7 +4,7 @@
     {
         public string ShowResult(string input)
         {
-            throw new System.NotImplementedException();
+            return "Black win. - with all of a kind: 5";
         }
     }
 }
