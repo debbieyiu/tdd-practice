@@ -14,11 +14,15 @@ namespace SibalaGame
 
             var compareResult = player1Dice.Value - player2Dice.Value;
 
+            var winnerOutput = string.Empty;
+            if (compareResult != 0)
+            {
+                winnerOutput = compareResult > 0 ? player1Dice.Output : player2Dice.Output;
+            }
+
             if (compareResult != 0)
             {
                 var winnerPlayer = compareResult > 0 ? players[0].Name : players[1].Name;
-                var winnerOutput = compareResult > 0 ? player1Dice.Output : player2Dice.Output;
-
                 var winnerCategory = "all of a kind";
                 return $"{winnerPlayer} win. - with {winnerCategory}: {winnerOutput}";
             }
