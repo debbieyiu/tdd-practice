@@ -1,4 +1,6 @@
-﻿namespace SibalaGame
+﻿using System.Linq;
+
+namespace SibalaGame
 {
     public class Game
     {
@@ -9,7 +11,7 @@
 
             var winnerPlayer = players[0].Name;
             var winnerCategory = "all of a kind";
-            var winnerOutput = "5";
+            var winnerOutput = players[0].Dices.First().Output;
             return $"{winnerPlayer} win. - with {winnerCategory}: {winnerOutput}";
         }
     }
