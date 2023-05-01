@@ -18,6 +18,10 @@ namespace SibalaGame
 
             var player2AndDices = playerSections[1].Split(":", StringSplitOptions.RemoveEmptyEntries);
             var player2Name = player2AndDices[0];
+            var player2Dices = player2AndDices[1]
+                .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+                .Select(str => new Dice { Value = int.Parse(str), Output = str })
+                .ToList();
 
             return new List<Player>
             {
@@ -26,7 +30,11 @@ namespace SibalaGame
                     Name = player1Name,
                     Dices = player1Dices
                 },
-                new Player { Name = player2Name }
+                new Player
+                {
+                    Name = player2Name,
+                    Dices = player2Dices
+                }
             };
         }
     }
