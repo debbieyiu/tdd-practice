@@ -12,14 +12,7 @@ namespace SibalaGame
             var player1Dice = players[0].Dices.First();
             var player2Dice = players[1].Dices.First();
 
-            var compareResult = player1Dice.Value - player2Dice.Value;
-
-            var winnerOutput = string.Empty;
-            if (compareResult != 0)
-            {
-                winnerOutput = compareResult > 0 ? player1Dice.Output : player2Dice.Output;
-            }
-
+            var compareResult = CompareResult(player1Dice, player2Dice, out var winnerOutput);
             if (compareResult != 0)
             {
                 var winnerPlayer = compareResult > 0 ? players[0].Name : players[1].Name;
@@ -28,6 +21,18 @@ namespace SibalaGame
             }
 
             return "Tie.";
+        }
+
+        private int CompareResult(Dice player1Dice, Dice player2Dice, out string winnerOutput)
+        {
+            winnerOutput = string.Empty;
+            var compareResult = player1Dice.Value - player2Dice.Value;
+            if (compareResult != 0)
+            {
+                winnerOutput = compareResult > 0 ? player1Dice.Output : player2Dice.Output;
+            }
+
+            return compareResult;
         }
     }
 }
