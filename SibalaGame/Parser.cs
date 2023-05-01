@@ -10,19 +10,7 @@ namespace SibalaGame
         {
             var playerSections = input.Split("  ");
             var player1 = GetPlayer(playerSections[0]);
-
-            var player2Section = playerSections[1];
-            var player2AndDices = player2Section.Split(":", StringSplitOptions.RemoveEmptyEntries);
-            var player2Name = player2AndDices[0];
-            var player2Dices = player2AndDices[1]
-                .Split(" ", StringSplitOptions.RemoveEmptyEntries)
-                .Select(str => new Dice { Value = int.Parse(str), Output = str })
-                .ToList();
-            var player2 = new Player
-            {
-                Name = player2Name,
-                Dices = player2Dices
-            };
+            var player2 = GetPlayer(playerSections[1]);
 
             return new List<Player>
             {
