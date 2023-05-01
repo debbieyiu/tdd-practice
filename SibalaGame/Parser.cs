@@ -16,7 +16,17 @@ namespace SibalaGame
 
             return new List<Player>
             {
-                new Player { Name = player1Name },
+                new Player
+                {
+                    Name = player1Name,
+                    Dices = new List<Dice>
+                    {
+                        new Dice { Value = 5, Output = "5" },
+                        new Dice { Value = 5, Output = "5" },
+                        new Dice { Value = 5, Output = "5" },
+                        new Dice { Value = 5, Output = "5" }
+                    }
+                },
                 new Player { Name = player2Name }
             };
         }

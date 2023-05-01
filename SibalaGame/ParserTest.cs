@@ -15,14 +15,17 @@ namespace SibalaGame
             actual.Should().BeEquivalentTo(
                 new List<Player>
                 {
-                    new Player { Name = "Black",
+                    new Player
+                    {
+                        Name = "Black",
                         Dices = new List<Dice>
                         {
                             new Dice { Value = 5, Output = "5" },
                             new Dice { Value = 5, Output = "5" },
                             new Dice { Value = 5, Output = "5" },
                             new Dice { Value = 5, Output = "5" }
-                        } },
+                        }
+                    },
                     new Player { Name = "White" }
                 });
         }
