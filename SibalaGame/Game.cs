@@ -21,11 +21,18 @@ namespace SibalaGame
                 if (compareResult > 0)
                 {
                     winnerPlayer = players[0].Name;
-                    winnerOutput = player1Dice.Output;
                 }
                 else
                 {
                     winnerPlayer = players[1].Name;
+                }
+
+                if (compareResult > 0)
+                {
+                    winnerOutput = player1Dice.Output;
+                }
+                else
+                {
                     winnerOutput = player2Dice.Output;
                 }
 
