@@ -26,7 +26,17 @@ namespace SibalaGame
                             new Dice { Value = 5, Output = "5" }
                         }
                     },
-                    new Player { Name = "White" }
+                    new Player
+                    {
+                        Name = "White",
+                        Dices = new List<Dice>
+                        {
+                            new Dice { Value = 2, Output = "2" },
+                            new Dice { Value = 2, Output = "2" },
+                            new Dice { Value = 2, Output = "2" },
+                            new Dice { Value = 2, Output = "2" }
+                        }
+                    }
                 });
         }
     }
