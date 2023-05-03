@@ -17,7 +17,7 @@ namespace SibalaGame
             if (compareResult != 0)
             {
                 var winnerPlayer = compareResult > 0 ? players[0].Name : players[1].Name;
-                var winnerCategory = "all of a kind";
+                var winnerCategory = allOfAKindComparer.WinnerCategoryName;
                 return $"{winnerPlayer} win. - with {winnerCategory}: {winnerOutput}";
             }
 

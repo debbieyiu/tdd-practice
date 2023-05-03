@@ -2,6 +2,8 @@
 {
     public class AllOfAKindComparer
     {
+        public string WinnerCategoryName => "all of a kind";
+
         public int CompareResult(Dice player1Dice, Dice player2Dice, out string winnerOutput)
         {
             winnerOutput = string.Empty;
