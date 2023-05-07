@@ -9,7 +9,14 @@ namespace SibalaGame
             var parser = new Parser();
             var players = parser.Parse(input);
 
-            var player1Dice = players[0].Dices.First();
+            var player1Dices = players[0].Dices;
+            if (player1Dices.GroupBy(dice => dice.Value)
+                .Count(grouping => grouping.Count() == 2) == 1)
+            {
+                return "Black win. - with normal point: 9";
+            }
+
+            var player1Dice = player1Dices.First();
             var player2Dice = players[1].Dices.First();
 
             var allOfAKindComparer = new AllOfAKindComparer();
