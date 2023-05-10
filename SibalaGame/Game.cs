@@ -14,9 +14,14 @@ namespace SibalaGame
                 .Count(grouping => grouping.Count() == 2) == 1;
             if (isNormalPoint)
             {
+                var dices1 = player1Dices.GroupBy(dice => dice.Value)
+                    .First(grouping => grouping.Count() == 2)
+                    .ToList();
+                var diceValuePlayer1 = player1Dices.Except(dices1).Sum(dice => dice.Value);
+
                 var winnerPlayer = players.First().Name;
                 var winnerCategory = "normal point";
-                var winnerOutput = "9";
+                var winnerOutput = diceValuePlayer1;
                 return $"{winnerPlayer} win. - with {winnerCategory}: {winnerOutput}";
             }
 
