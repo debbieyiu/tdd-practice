@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks.Dataflow;
 
 namespace SibalaGame
@@ -16,21 +17,10 @@ namespace SibalaGame
                 .Count(grouping => grouping.Count() == 2) == 1;
             if (isNormalPoint)
             {
-                var dices1 = player1Dices.GroupBy(dice => dice.Value)
-                    .First(grouping => grouping.Count() == 2)
-                    .ToList();
-                var diceValuePlayer1 = player1Dices.Except(dices1).Sum(dice => dice.Value);
+                var compareResult2 = NormalPointCompare(player1Dices, player2Dices, out var winnerOutput);
 
-                var dices2 = player2Dices.GroupBy(dice => dice.Value)
-                    .First(grouping => grouping.Count() == 2)
-                    .ToList();
-                var diceValuePlayer2 = player2Dices.Except(dices2).Sum(dice => dice.Value);
-
-                var compareResult2 = diceValuePlayer1 - diceValuePlayer2;
                 var winnerPlayer = compareResult2 > 0 ? players[0].Name : players[1].Name;
-
                 var winnerCategory = "normal point";
-                var winnerOutput = compareResult2 > 0 ? diceValuePlayer1.ToString() : diceValuePlayer2.ToString();
                 return $"{winnerPlayer} win. - with {winnerCategory}: {winnerOutput}";
             }
 
@@ -47,6 +37,22 @@ namespace SibalaGame
             }
 
             return "Tie.";
+        }
+
+        private int NormalPointCompare(List<Dice> player1Dices, List<Dice> player2Dices, out string winnerOutput)
+        {
+            var dices1 = player1Dices.GroupBy(dice => dice.Value)
+                .First(grouping => grouping.Count() == 2)
+                .ToList();
+            var diceValuePlayer1 = player1Dices.Except(dices1).Sum(dice => dice.Value);
+
+            var dices2 = player2Dices.GroupBy(dice => dice.Value)
+                .First(grouping => grouping.Count() == 2)
+                .ToList();
+            var diceValuePlayer2 = player2Dices.Except(dices2).Sum(dice => dice.Value);
+            var compareResult2 = diceValuePlayer1 - diceValuePlayer2;
+            winnerOutput = compareResult2 > 0 ? diceValuePlayer1.ToString() : diceValuePlayer2.ToString();
+            return compareResult2;
         }
     }
 }
