@@ -10,10 +10,14 @@ namespace SibalaGame
             var players = parser.Parse(input);
 
             var player1Dices = players[0].Dices;
-            if (player1Dices.GroupBy(dice => dice.Value)
-                .Count(grouping => grouping.Count() == 2) == 1)
+            var isNormalPoint = player1Dices.GroupBy(dice => dice.Value)
+                .Count(grouping => grouping.Count() == 2) == 1;
+            if (isNormalPoint)
             {
-                return "Black win. - with normal point: 9";
+                var winnerPlayer = players.First().Name;
+                var winnerCategory = "normal point";
+                var winnerOutput = "9";
+                return $"{winnerPlayer} win. - with {winnerCategory}: {winnerOutput}";
             }
 
             var player1Dice = player1Dices.First();
