@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks.Dataflow;
+﻿using System.Linq;
 
 namespace SibalaGame
 {
@@ -11,13 +9,15 @@ namespace SibalaGame
             var parser = new Parser();
             var players = parser.Parse(input);
 
-            var player1Dices = players.First().Dices;
-            var player2Dices = players.Last().Dices;
+            var player1Dices = players[0].Dices;
+            var player2Dices = players[1].Dices;
+
             var isNormalPoint = player1Dices.GroupBy(dice => dice.Value)
                 .Count(grouping => grouping.Count() == 2) == 1;
             if (isNormalPoint)
             {
-                var compareResult2 = NormalPointCompare(player1Dices, player2Dices, out var winnerOutput);
+                var normalPointComparer = new NormalPointComparer();
+                var compareResult2 = normalPointComparer.Compare(player1Dices, player2Dices, out var winnerOutput);
 
                 var winnerPlayer = compareResult2 > 0 ? players[0].Name : players[1].Name;
                 var winnerCategory = "normal point";
@@ -28,7 +28,7 @@ namespace SibalaGame
             var player2Dice = players[1].Dices.First();
 
             var allOfAKindComparer = new AllOfAKindComparer();
-            var compareResult = allOfAKindComparer.CompareResult(player1Dice, player2Dice);
+            var compareResult = allOfAKindComparer.Compare(player1Dice, player2Dice);
             if (compareResult != 0)
             {
                 var winnerPlayer = compareResult > 0 ? players[0].Name : players[1].Name;
@@ -37,22 +37,6 @@ namespace SibalaGame
             }
 
             return "Tie.";
-        }
-
-        private int NormalPointCompare(List<Dice> player1Dices, List<Dice> player2Dices, out string winnerOutput)
-        {
-            var dices1 = player1Dices.GroupBy(dice => dice.Value)
-                .First(grouping => grouping.Count() == 2)
-                .ToList();
-            var diceValuePlayer1 = player1Dices.Except(dices1).Sum(dice => dice.Value);
-
-            var dices2 = player2Dices.GroupBy(dice => dice.Value)
-                .First(grouping => grouping.Count() == 2)
-                .ToList();
-            var diceValuePlayer2 = player2Dices.Except(dices2).Sum(dice => dice.Value);
-            var compareResult2 = diceValuePlayer1 - diceValuePlayer2;
-            winnerOutput = compareResult2 > 0 ? diceValuePlayer1.ToString() : diceValuePlayer2.ToString();
-            return compareResult2;
         }
     }
 }
