@@ -14,27 +14,25 @@ namespace SibalaGame
             int compareResult;
             string winnerCategory;
             string winnerOutput;
+            IComparer comparer;
 
             var isNormalPoint = player1Dices.GroupBy(dice => dice.Value)
                 .Count(grouping => grouping.Count() == 2) == 1;
             if (isNormalPoint)
             {
-                IComparer normalPointComparer = new NormalPointComparer();
-                compareResult = normalPointComparer.Compare(player1Dices, player2Dices);
-                winnerCategory = normalPointComparer.WinnerCategoryName;
-                winnerOutput = normalPointComparer.WinnerOutput;
+                comparer = new NormalPointComparer();
             }
             else
             {
-                IComparer allOfAKindComparer = new AllOfAKindComparer();
-                compareResult = allOfAKindComparer.Compare(player1Dices, player2Dices);
-                winnerCategory = allOfAKindComparer.WinnerCategoryName;
-                winnerOutput = allOfAKindComparer.WinnerOutput;
+                comparer = new AllOfAKindComparer();
             }
 
+            compareResult = comparer.Compare(player1Dices, player2Dices);
             if (compareResult != 0)
             {
                 var winnerPlayer = compareResult > 0 ? players[0].Name : players[1].Name;
+                winnerCategory = comparer.WinnerCategoryName;
+                winnerOutput = comparer.WinnerOutput;
                 return $"{winnerPlayer} win. - with {winnerCategory}: {winnerOutput}";
             }
 
