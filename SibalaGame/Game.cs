@@ -17,11 +17,11 @@ namespace SibalaGame
             if (isNormalPoint)
             {
                 var normalPointComparer = new NormalPointComparer();
-                var compareResult2 = normalPointComparer.Compare(player1Dices, player2Dices, out var winnerOutput);
+                var compareResult2 = normalPointComparer.Compare(player1Dices, player2Dices);
 
                 var winnerPlayer = compareResult2 > 0 ? players[0].Name : players[1].Name;
                 var winnerCategory = normalPointComparer.WinnerCategoryName;
-                return $"{winnerPlayer} win. - with {winnerCategory}: {winnerOutput}";
+                return $"{winnerPlayer} win. - with {winnerCategory}: {normalPointComparer.WinnerOutput}";
             }
 
             var player1Dice = player1Dices.First();
