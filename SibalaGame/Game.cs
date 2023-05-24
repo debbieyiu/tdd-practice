@@ -8,32 +8,34 @@ namespace SibalaGame
         {
             var parser = new Parser();
             var players = parser.Parse(input);
-
             var player1Dices = players[0].Dices;
             var player2Dices = players[1].Dices;
+
+            int compareResult;
+            string winnerCategory;
+            string winnerOutput;
 
             var isNormalPoint = player1Dices.GroupBy(dice => dice.Value)
                 .Count(grouping => grouping.Count() == 2) == 1;
             if (isNormalPoint)
             {
                 var normalPointComparer = new NormalPointComparer();
-                var compareResult2 = normalPointComparer.Compare(player1Dices, player2Dices);
-
-                var winnerPlayer = compareResult2 > 0 ? players[0].Name : players[1].Name;
-                var winnerCategory = normalPointComparer.WinnerCategoryName;
-                return $"{winnerPlayer} win. - with {winnerCategory}: {normalPointComparer.WinnerOutput}";
+                compareResult = normalPointComparer.Compare(player1Dices, player2Dices);
+                winnerCategory = normalPointComparer.WinnerCategoryName;
+                winnerOutput = normalPointComparer.WinnerOutput;
+            }
+            else
+            {
+                var allOfAKindComparer = new AllOfAKindComparer();
+                compareResult = allOfAKindComparer.Compare(player1Dices, player2Dices);
+                winnerCategory = allOfAKindComparer.WinnerCategoryName;
+                winnerOutput = allOfAKindComparer.WinnerOutput;
             }
 
-            var player1Dice = player1Dices.First();
-            var player2Dice = players[1].Dices.First();
-
-            var allOfAKindComparer = new AllOfAKindComparer();
-            var compareResult = allOfAKindComparer.Compare(player1Dice, player2Dice);
             if (compareResult != 0)
             {
                 var winnerPlayer = compareResult > 0 ? players[0].Name : players[1].Name;
-                var winnerCategory = allOfAKindComparer.WinnerCategoryName;
-                return $"{winnerPlayer} win. - with {winnerCategory}: {allOfAKindComparer.WinnerOutput}";
+                return $"{winnerPlayer} win. - with {winnerCategory}: {winnerOutput}";
             }
 
             return "Tie.";
