@@ -19,7 +19,7 @@ namespace SibalaGame
                 .Count(grouping => grouping.Count() == 2) == 1;
             if (isNormalPoint)
             {
-                var normalPointComparer = new NormalPointComparer();
+                IComparer normalPointComparer = new NormalPointComparer();
                 compareResult = normalPointComparer.Compare(player1Dices, player2Dices);
                 winnerCategory = normalPointComparer.WinnerCategoryName;
                 winnerOutput = normalPointComparer.WinnerOutput;

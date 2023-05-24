@@ -3,10 +3,10 @@ using System.Linq;
 
 namespace SibalaGame
 {
-    public class NormalPointComparer
+    public class NormalPointComparer : IComparer
     {
-        public string WinnerOutput;
         public string WinnerCategoryName => "normal point";
+        public string WinnerOutput { get; private set; }
 
         public int Compare(List<Dice> player1Dices, List<Dice> player2Dices)
         {
