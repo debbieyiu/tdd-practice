@@ -5,6 +5,8 @@ namespace SibalaGame
 {
     public class NormalPointComparer
     {
+        public string WinnerCategoryName => "normal point";
+
         public int Compare(List<Dice> player1Dices, List<Dice> player2Dices, out string winnerOutput)
         {
             var dices1 = player1Dices.GroupBy(dice => dice.Value)

@@ -20,7 +20,7 @@ namespace SibalaGame
                 var compareResult2 = normalPointComparer.Compare(player1Dices, player2Dices, out var winnerOutput);
 
                 var winnerPlayer = compareResult2 > 0 ? players[0].Name : players[1].Name;
-                var winnerCategory = "normal point";
+                var winnerCategory = normalPointComparer.WinnerCategoryName;
                 return $"{winnerPlayer} win. - with {winnerCategory}: {winnerOutput}";
             }
 
