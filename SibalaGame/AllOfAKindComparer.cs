@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using NUnit.Framework;
 
 namespace SibalaGame
 {
-    public class AllOfAKindComparer
+    public class AllOfAKindComparer : IComparer
     {
         public string WinnerCategoryName => "all of a kind";
 

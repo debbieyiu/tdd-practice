@@ -26,7 +26,7 @@ namespace SibalaGame
             }
             else
             {
-                var allOfAKindComparer = new AllOfAKindComparer();
+                IComparer allOfAKindComparer = new AllOfAKindComparer();
                 compareResult = allOfAKindComparer.Compare(player1Dices, player2Dices);
                 winnerCategory = allOfAKindComparer.WinnerCategoryName;
                 winnerOutput = allOfAKindComparer.WinnerOutput;
