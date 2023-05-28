@@ -20,10 +20,11 @@ namespace SibalaGame
 
         private static int CalculateNormalPoint(List<Dice> dices)
         {
-            var pairs = dices.GroupBy(dice => dice.Value)
+            var minPairs = dices.GroupBy(dice => dice.Value)
+                .OrderBy(grouping => grouping.Key)
                 .First(grouping => grouping.Count() == 2)
                 .ToList();
-            return dices.Except(pairs).Sum(dice => dice.Value);
+            return dices.Except(minPairs).Sum(dice => dice.Value);
         }
     }
 }
