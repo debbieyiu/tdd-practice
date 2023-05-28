@@ -17,7 +17,7 @@ namespace SibalaGame
             IComparer comparer;
 
             var isNormalPoint = player1Dices.GroupBy(dice => dice.Value)
-                .Count(grouping => grouping.Count() == 2) == 1;
+                .Count(grouping => grouping.Count() == 2) >= 1;
             if (isNormalPoint)
             {
                 comparer = new NormalPointComparer();
