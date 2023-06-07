@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SibalaGame
 {
@@ -16,9 +18,15 @@ namespace SibalaGame
             string winnerOutput;
             IComparer comparer;
 
-            var isNormalPoint = player1Dices.GroupBy(dice => dice.Value)
-                .Count(grouping => grouping.Count() == 2) >= 1;
-            if (isNormalPoint)
+            var player1Category = GetDicesCategory(player1Dices);
+            var player2Category = GetDicesCategory(player2Dices);
+
+            if (player1Category != player2Category)
+            {
+                return "Black win. - with all of a kind: 5";
+            }
+
+            if (player1Category == Category.NormalPoint)
             {
                 comparer = new NormalPointComparer();
             }
@@ -37,6 +45,22 @@ namespace SibalaGame
             }
 
             return "Tie.";
+        }
+
+        private Category GetDicesCategory(List<Dice> dices)
+        {
+            var groupBy = dices.GroupBy(dice => dice.Value).ToList();
+            if (groupBy.Count(grouping => grouping.Count() == 4) == 1)
+            {
+                return Category.AllOfAKind;
+            }
+
+            if (groupBy.Count(grouping => grouping.Count() == 2) >= 1)
+            {
+                return Category.NormalPoint;
+            }
+
+            throw new NotImplementedException();
         }
     }
 }
