@@ -38,6 +38,13 @@ namespace SibalaGame
             AssertShowResultShouldReturn(input, expected);
         }
 
+        [Test]
+        [TestCase("Black: 5 5 5 5  White: 4 1 4 6", "Black win. - with all of a kind: 5")]
+        public void A03_DifferentCategory(string input, string expected)
+        {
+            AssertShowResultShouldReturn(input, expected);
+        }
+
         private void AssertShowResultShouldReturn(string input, string expected)
         {
             var actual = _target.ShowResult(input);
