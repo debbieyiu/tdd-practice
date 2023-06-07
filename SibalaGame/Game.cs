@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace SibalaGame
@@ -18,8 +17,8 @@ namespace SibalaGame
             string winnerOutput;
             IComparer comparer;
 
-            var player1Category = GetDicesCategory(player1Dices);
-            var player2Category = GetDicesCategory(player2Dices);
+            var player1Category = GetDicesCategory(new Dices(player1Dices));
+            var player2Category = GetDicesCategory(new Dices(player2Dices));
 
             if (player1Category != player2Category)
             {
@@ -47,7 +46,7 @@ namespace SibalaGame
             return "Tie.";
         }
 
-        private Category GetDicesCategory(List<Dice> dices)
+        private Category GetDicesCategory(Dices dices)
         {
             var groupBy = dices.GroupBy(dice => dice.Value).ToList();
             if (groupBy.Count(grouping => grouping.Count() == 4) == 1)
