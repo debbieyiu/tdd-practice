@@ -17,8 +17,8 @@ namespace SibalaGame
             string winnerOutput;
             IComparer comparer;
 
-            var player1Category = GetDicesCategory(new Dices(player1Dices));
-            var player2Category = GetDicesCategory(new Dices(player2Dices));
+            var player1Category = new Dices(player1Dices).GetDicesCategory();
+            var player2Category = new Dices(player2Dices).GetDicesCategory();
 
             if (player1Category != player2Category)
             {
@@ -44,22 +44,6 @@ namespace SibalaGame
             }
 
             return "Tie.";
-        }
-
-        private Category GetDicesCategory(Dices dices)
-        {
-            var groupBy = dices.GroupBy(dice => dice.Value).ToList();
-            if (groupBy.Count(grouping => grouping.Count() == 4) == 1)
-            {
-                return Category.AllOfAKind;
-            }
-
-            if (groupBy.Count(grouping => grouping.Count() == 2) >= 1)
-            {
-                return Category.NormalPoint;
-            }
-
-            throw new NotImplementedException();
         }
     }
 }

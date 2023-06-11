@@ -1,6 +1,6 @@
 ﻿namespace SibalaGame
 {
-    internal enum Category
+    public enum Category
     {
         AllOfAKind,
         NormalPoint
