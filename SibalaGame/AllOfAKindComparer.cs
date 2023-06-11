@@ -9,7 +9,7 @@ namespace SibalaGame
 
         public string WinnerOutput { get; private set; }
 
-        public int Compare(List<Dice> dices1, List<Dice> dices2)
+        public int Compare(Dices dices1, Dices dices2)
         {
             var valueOrdering = new List<int> { 2, 3, 5, 6, 4, 1 };
             var compareResult = valueOrdering.IndexOf(dices1.First().Value) - valueOrdering.IndexOf(dices2.First().Value);

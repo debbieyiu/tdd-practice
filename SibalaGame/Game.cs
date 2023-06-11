@@ -17,8 +17,8 @@ namespace SibalaGame
             string winnerOutput;
             IComparer comparer;
 
-            var player1Category = new Dices(player1Dices).GetDicesCategory();
-            var player2Category = new Dices(player2Dices).GetDicesCategory();
+            var player1Category = player1Dices.GetDicesCategory();
+            var player2Category = player2Dices.GetDicesCategory();
 
             if (player1Category != player2Category)
             {

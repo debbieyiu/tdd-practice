@@ -18,24 +18,24 @@ namespace SibalaGame
                     new Player
                     {
                         Name = "Black",
-                        Dices = new List<Dice>
+                        Dices = new Dices(new List<Dice>
                         {
                             new Dice { Value = 5, Output = "5" },
                             new Dice { Value = 5, Output = "5" },
                             new Dice { Value = 5, Output = "5" },
                             new Dice { Value = 5, Output = "5" }
-                        }
+                        })
                     },
                     new Player
                     {
                         Name = "White",
-                        Dices = new List<Dice>
+                        Dices = new Dices(new List<Dice>
                         {
                             new Dice { Value = 2, Output = "2" },
                             new Dice { Value = 2, Output = "2" },
                             new Dice { Value = 2, Output = "2" },
                             new Dice { Value = 2, Output = "2" }
-                        }
+                        })
                     }
                 });
         }

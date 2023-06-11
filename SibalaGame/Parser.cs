@@ -29,7 +29,7 @@ namespace SibalaGame
             return new Player
             {
                 Name = name,
-                Dices = dices
+                Dices = new Dices(dices)
             };
         }
     }
