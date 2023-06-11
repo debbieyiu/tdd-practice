@@ -14,15 +14,25 @@ namespace SibalaGame
             _dices = dices;
         }
 
+        public List<IGrouping<int, Dice>> DiceGrouping => this.GroupBy(dice => dice.Value).ToList();
+
+        public List<Dice> CalculateNormalPointDices()
+        {
+            var minPairs = DiceGrouping
+                .OrderBy(grouping => grouping.Key)
+                .First(grouping => grouping.Count() == 2)
+                .ToList();
+            return this.Except(minPairs).ToList();
+        }
+
         public Category GetDicesCategory()
         {
-            var groupBy = this.GroupBy(dice => dice.Value).ToList();
-            if (groupBy.Count(grouping => grouping.Count() == 4) == 1)
+            if (DiceGrouping.Count(grouping => grouping.Count() == 4) == 1)
             {
                 return Category.AllOfAKind;
             }
 
-            if (groupBy.Count(grouping => grouping.Count() == 2) >= 1)
+            if (DiceGrouping.Count(grouping => grouping.Count() == 2) >= 1)
             {
                 return Category.NormalPoint;
             }
