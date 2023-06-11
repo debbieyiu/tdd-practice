@@ -17,21 +17,20 @@ namespace SibalaGame
             string winnerOutput;
             IComparer comparer;
 
-            var player1Category = player1Dices.GetDicesCategory();
-            var player2Category = player2Dices.GetDicesCategory();
-
-            if (player1Category != player2Category)
+            if (player1Dices.GetDicesCategory() != player2Dices.GetDicesCategory())
             {
-                return "Black win. - with all of a kind: 5";
-            }
-
-            if (player1Category == Category.NormalPoint)
-            {
-                comparer = new NormalPointComparer();
+                comparer = new DifferentCategoryComparer();
             }
             else
             {
-                comparer = new AllOfAKindComparer();
+                if (player1Dices.GetDicesCategory() == Category.NormalPoint)
+                {
+                    comparer = new NormalPointComparer();
+                }
+                else
+                {
+                    comparer = new AllOfAKindComparer();
+                }
             }
 
             compareResult = comparer.Compare(player1Dices, player2Dices);
