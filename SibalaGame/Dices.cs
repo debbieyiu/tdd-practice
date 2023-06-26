@@ -29,7 +29,7 @@ namespace SibalaGame
         {
             if (DiceGrouping.Count(grouping => grouping.Count() == 4) == 1)
             {
-                return new AllOfAKind();
+                return new AllOfAKind(this);
             }
 
             throw new NotImplementedException();
