@@ -4,5 +4,6 @@
     {
         public abstract string Name { get; }
         public abstract string Output { get; }
+        public abstract CategoryType Type { get; }
     }
 }

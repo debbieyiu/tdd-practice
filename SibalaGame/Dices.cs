@@ -32,6 +32,11 @@ namespace SibalaGame
                 return new AllOfAKind(this);
             }
 
+            if (DiceGrouping.Count(grouping => grouping.Count() == 2) >= 1)
+            {
+                return new NormalPoint(this);
+            }
+
             throw new NotImplementedException();
         }
 
