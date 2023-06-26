@@ -25,16 +25,26 @@ namespace SibalaGame
             return this.Except(minPairs).ToList();
         }
 
-        public Category GetDicesCategory()
+        public Category GetCategory()
         {
             if (DiceGrouping.Count(grouping => grouping.Count() == 4) == 1)
             {
-                return Category.AllOfAKind;
+                return new AllOfAKind();
+            }
+
+            throw new NotImplementedException();
+        }
+
+        public CategoryType GetDicesCategory()
+        {
+            if (DiceGrouping.Count(grouping => grouping.Count() == 4) == 1)
+            {
+                return CategoryType.AllOfAKind;
             }
 
             if (DiceGrouping.Count(grouping => grouping.Count() == 2) >= 1)
             {
-                return Category.NormalPoint;
+                return CategoryType.NormalPoint;
             }
 
             throw new NotImplementedException();

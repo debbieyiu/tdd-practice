@@ -1,8 +1,7 @@
 ﻿namespace SibalaGame
 {
-    public enum Category
+    public abstract class Category
     {
-        AllOfAKind,
-        NormalPoint
+        public abstract string Name { get; }
     }
 }

@@ -23,7 +23,7 @@ namespace SibalaGame
             }
             else
             {
-                if (player1Dices.GetDicesCategory() == Category.NormalPoint)
+                if (player1Dices.GetDicesCategory() == CategoryType.NormalPoint)
                 {
                     comparer = new NormalPointComparer();
                 }

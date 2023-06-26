@@ -7,7 +7,7 @@
 
         public int Compare(Dices dices1, Dices dices2)
         {
-            WinnerCategoryName = "all of a kind";
+            WinnerCategoryName = dices1.GetCategory().Name; // "all of a kind";
             WinnerOutput = "5";
             return 1;
         }
