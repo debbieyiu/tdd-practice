@@ -35,7 +35,8 @@ namespace SibalaGame
                 var winnerPlayer = compareResult > 0 ? players[0].Name : players[1].Name;
                 var winnerCategory = comparer.WinnerCategory.Name;
                 var winnerOutput = comparer.WinnerCategory.Output;
-                return $"{winnerPlayer} win. - with {winnerCategory}: {winnerOutput}";
+                var winnerDescription = $"{winnerCategory}: {winnerOutput}";
+                return $"{winnerPlayer} win. - with {winnerDescription}";
             }
 
             return "Tie.";
