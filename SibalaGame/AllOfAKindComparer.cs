@@ -5,9 +5,7 @@ namespace SibalaGame
 {
     public class AllOfAKindComparer : IComparer
     {
-        public string WinnerCategoryName => "all of a kind";
-
-        public string WinnerOutput { get; private set; }
+        public Category WinnerCategory { get; set; }
 
         public int Compare(Dices dices1, Dices dices2)
         {
@@ -15,7 +13,7 @@ namespace SibalaGame
             var compareResult = valueOrdering.IndexOf(dices1.First().Value) - valueOrdering.IndexOf(dices2.First().Value);
             if (compareResult != 0)
             {
-                WinnerOutput = compareResult > 0 ? dices1.First().Output : dices2.First().Output;
+                WinnerCategory = new AllOfAKind(compareResult > 0 ? dices1 : dices2);
             }
 
             return compareResult;

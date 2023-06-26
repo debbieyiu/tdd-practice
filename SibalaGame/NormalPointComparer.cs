@@ -5,8 +5,7 @@ namespace SibalaGame
 {
     public class NormalPointComparer : IComparer
     {
-        public string WinnerCategoryName => "normal point";
-        public string WinnerOutput { get; private set; }
+        public Category WinnerCategory { get; set; }
 
         public int Compare(Dices player1Dices, Dices player2Dices)
         {
@@ -23,7 +22,7 @@ namespace SibalaGame
 
             if (compareResult != 0)
             {
-                WinnerOutput = compareResult > 0 ? dicesPointPlayer1.ToString() : dicesPointPlayer2.ToString();
+                WinnerCategory = new NormalPoint(compareResult > 0 ? player1Dices : player2Dices);
             }
 
             return compareResult;

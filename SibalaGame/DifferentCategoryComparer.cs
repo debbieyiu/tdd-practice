@@ -2,8 +2,7 @@
 {
     public class DifferentCategoryComparer : IComparer
     {
-        public string WinnerCategoryName { get; private set; }
-        public string WinnerOutput { get; private set; }
+        public Category WinnerCategory { get; set; }
 
         public int Compare(Dices dices1, Dices dices2)
         {
@@ -14,9 +13,7 @@
 
             if (compareResult != 0)
             {
-                var winnerCategory = compareResult > 0 ? category1 : category2;
-                WinnerCategoryName = winnerCategory.Name;
-                WinnerOutput = winnerCategory.Output;
+                WinnerCategory = compareResult > 0 ? category1 : category2;
             }
 
             return compareResult;

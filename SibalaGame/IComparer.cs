@@ -4,8 +4,7 @@ namespace SibalaGame
 {
     public interface IComparer
     {
-        string WinnerCategoryName { get; }
-        string WinnerOutput { get; }
+        Category WinnerCategory { get; }
 
         int Compare(Dices dices1, Dices dices2);
     }
