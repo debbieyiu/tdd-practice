@@ -37,7 +37,7 @@ namespace SibalaGame
                 return new NormalPoint(this);
             }
 
-            throw new NotImplementedException();
+            return new NoPoint();
         }
 
         public IEnumerator<Dice> GetEnumerator()

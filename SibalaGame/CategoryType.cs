@@ -2,7 +2,8 @@
 {
     public enum CategoryType
     {
-        NormalPoint,
-        AllOfAKind,
+        NormalPoint = 1,
+        AllOfAKind = 2,
+        NoPoint = 0
     }
 }
