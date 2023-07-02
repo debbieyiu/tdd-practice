@@ -41,6 +41,7 @@ namespace SibalaGame
         [Test]
         [TestCase("Black: 5 5 5 5  White: 4 1 4 6", "Black win. - with all of a kind: 5")]
         [TestCase("Black: 3 1 3 8  White: 2 2 2 2", "White win. - with all of a kind: 2")]
+        [TestCase("Black: 2 5 1 5  White: 1 3 5 2", "Black win. - with normal point: 3")]
         public void A03_DifferentCategory(string input, string expected)
         {
             AssertShowResultShouldReturn(input, expected);
