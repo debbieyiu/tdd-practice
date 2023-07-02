@@ -42,17 +42,7 @@ namespace SibalaGame
 
         public CategoryType GetDicesCategory()
         {
-            if (DiceGrouping.Count(grouping => grouping.Count() == 4) == 1)
-            {
-                return CategoryType.AllOfAKind;
-            }
-
-            if (DiceGrouping.Count(grouping => grouping.Count() == 2) >= 1)
-            {
-                return CategoryType.NormalPoint;
-            }
-
-            throw new NotImplementedException();
+            return GetCategory().Type;
         }
 
         public IEnumerator<Dice> GetEnumerator()
