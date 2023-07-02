@@ -40,11 +40,6 @@ namespace SibalaGame
             throw new NotImplementedException();
         }
 
-        public CategoryType GetDicesCategory()
-        {
-            return GetCategory().Type;
-        }
-
         public IEnumerator<Dice> GetEnumerator()
         {
             return _dices.GetEnumerator();
