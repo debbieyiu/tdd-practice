@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace SibalaGame
@@ -19,14 +19,14 @@ namespace SibalaGame
             }
             else
             {
-                if (player1Dices.GetCategory().Type == CategoryType.NormalPoint)
+                var sameCategoryComparerLookup = new Dictionary<CategoryType, IComparer>
                 {
-                    comparer = new NormalPointComparer();
-                }
-                else
-                {
-                    comparer = new AllOfAKindComparer();
-                }
+                    { CategoryType.AllOfAKind, new AllOfAKindComparer() },
+                    { CategoryType.NormalPoint, new NormalPointComparer() },
+                    { CategoryType.NoPoint, new NoPointComparer() },
+                };
+
+                comparer = sameCategoryComparerLookup[player1Dices.GetCategory().Type];
             }
 
             var compareResult = comparer.Compare(player1Dices, player2Dices);
