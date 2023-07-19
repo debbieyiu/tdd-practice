@@ -1,6 +1,4 @@
-﻿using System.Linq;
-
-namespace SibalaGame
+﻿namespace SibalaGame
 {
     public class Game
     {

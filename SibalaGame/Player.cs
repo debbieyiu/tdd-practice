@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace SibalaGame
+﻿namespace SibalaGame
 {
     public class Player
     {
