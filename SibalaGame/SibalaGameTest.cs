@@ -15,11 +15,16 @@ namespace SibalaGame
         }
 
         [Test]
-        public void A01_Both_AllOfAKind()
+        [TestCase("Black: 5 5 5 5  White: 2 2 2 2", "Black win with all of a kind: 5")]
+        public void A01_Both_AllOfAKind(string input, string expected)
         {
-            var input = "Black: 5 5 5 5  White: 2 2 2 2";
+            AssertShowResultShouldReturn(input, expected);
+        }
+
+        private void AssertShowResultShouldReturn(string input, string expected)
+        {
             var actual = _target.ShowResult(input);
-            actual.Should().Be("Black win with all of a kind: 5");
+            actual.Should().Be(expected);
         }
     }
 }
