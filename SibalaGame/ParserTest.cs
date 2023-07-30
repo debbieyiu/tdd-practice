@@ -8,13 +8,21 @@ namespace SibalaGame
     public class ParserTest
     {
         [Test]
-        public void A01_Parse_ParsePlayerName()
+        public void A01_Parse_ParsePlayerNameAndDices()
         {
             var parser = new Parser();
             var actual = parser.Parse("Black: 5 5 5 5  White: 2 2 2 2");
             actual.Should().BeEquivalentTo(new List<Player>
             {
-                new Player { Name = "Black" },
+                new Player { Name = "Black",
+                    Dices = new List<Dice>
+                    {
+                        new Dice { Value = "5" },
+                        new Dice { Value = "5" },
+                        new Dice { Value = "5" },
+                        new Dice { Value = "5" }
+                    }
+                },
                 new Player { Name = "White" }
             });
         }
