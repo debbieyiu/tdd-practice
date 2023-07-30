@@ -15,7 +15,12 @@ namespace SibalaGame
                 .Split(" ", StringSplitOptions.RemoveEmptyEntries)
                 .Select(s => new Dice { Value = s })
                 .ToList();
-            var player2Name = playerBlocks.Last().Split(":", StringSplitOptions.RemoveEmptyEntries).First();
+            var player2Block = playerBlocks.Last().Split(":", StringSplitOptions.RemoveEmptyEntries);
+            var player2Name = player2Block.First();
+            var player2Dices = player2Block.Last()
+                .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+                .Select(s => new Dice { Value = s })
+                .ToList();
 
             return new List<Player>
             {
@@ -24,7 +29,11 @@ namespace SibalaGame
                     Name = player1Name,
                     Dices = player1Dices
                 },
-                new Player { Name = player2Name }
+                new Player
+                {
+                    Name = player2Name,
+                    Dices = player2Dices
+                }
             };
         }
     }
