@@ -1,0 +1,22 @@
+﻿using System.Collections.Generic;
+using FluentAssertions;
+using NUnit.Framework;
+
+namespace SibalaGame
+{
+    [TestFixture]
+    public class ParserTest
+    {
+        [Test]
+        public void A01_Parse_ParsePlayerName()
+        {
+            var parser = new Parser();
+            var actual = parser.Parse("Black: 5 5 5 5  White: 2 2 2 2");
+            actual.Should().BeEquivalentTo(new List<Player>
+            {
+                new Player { Name = "Black" },
+                new Player { Name = "White" }
+            });
+        }
+    }
+}
