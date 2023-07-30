@@ -9,12 +9,10 @@ namespace SibalaGame
         public List<Player> Parse(string input)
         {
             var playerBlocks = input.Split("  ", StringSplitOptions.RemoveEmptyEntries);
-            var player1 = GetPlayer(playerBlocks, 0);
-            var player2 = GetPlayer(playerBlocks, 1);
             return new List<Player>
             {
-                player1,
-                player2
+                GetPlayer(playerBlocks, 0),
+                GetPlayer(playerBlocks, 1)
             };
         }
 
