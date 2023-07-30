@@ -10,18 +10,7 @@ namespace SibalaGame
         {
             var playerBlocks = input.Split("  ", StringSplitOptions.RemoveEmptyEntries);
             var player1 = GetPlayer(playerBlocks, 0);
-            var player2Block = playerBlocks.Last().Split(":", StringSplitOptions.RemoveEmptyEntries);
-            var player2Name = player2Block.First();
-            var player2Dices = player2Block.Last()
-                .Split(" ", StringSplitOptions.RemoveEmptyEntries)
-                .Select(s => new Dice { Value = s })
-                .ToList();
-
-            var player2 = new Player
-            {
-                Name = player2Name,
-                Dices = player2Dices
-            };
+            var player2 = GetPlayer(playerBlocks, 1);
             return new List<Player>
             {
                 player1,
