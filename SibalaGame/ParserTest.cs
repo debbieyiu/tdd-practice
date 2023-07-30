@@ -8,7 +8,7 @@ namespace SibalaGame
     public class ParserTest
     {
         [Test]
-        public void A01_Parse_ParsePlayerNameAndDices()
+        public void A01_Parse()
         {
             var parser = new Parser();
             var actual = parser.Parse("Black: 5 5 5 5  White: 2 2 2 2");
@@ -23,7 +23,17 @@ namespace SibalaGame
                         new Dice { Value = "5" }
                     }
                 },
-                new Player { Name = "White" }
+                new Player
+                {
+                    Name = "White",
+                    Dices = new List<Dice>
+                    {
+                        new Dice { Value = "2" },
+                        new Dice { Value = "2" },
+                        new Dice { Value = "2" },
+                        new Dice { Value = "2" }
+                    }
+                }
             });
         }
     }
