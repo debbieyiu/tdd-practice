@@ -11,20 +11,21 @@ namespace SibalaGame
             var dice1 = players[0].Dices.First();
             var dice2 = players[1].Dices.First();
 
-            if ((int)(dice1.Value) > (int)(dice2.Value))
+            string winnerPlayer;
+            string winnerOutput;
+            if (dice1.Value > dice2.Value)
             {
-                var winnerPlayer = players[0].Name;
-                var winnerCategory = "all of a kind";
-                var winnerOutput = players[0].Dices.First().Value.ToString();
-                return $"{winnerPlayer} win with {winnerCategory}: {winnerOutput}";
+                winnerPlayer = players[0].Name;
+                winnerOutput = players[0].Dices.First().Value.ToString();
             }
             else
             {
-                var winnerPlayer = players[1].Name;
-                var winnerCategory = "with all of a kind";
-                var winnerOutput = players[1].Dices.First().Value.ToString();
-                return $"{winnerPlayer} win. - {winnerCategory}: {winnerOutput}";
+                winnerPlayer = players[1].Name;
+                winnerOutput = players[1].Dices.First().Value.ToString();
             }
+
+            var winnerCategory = "all of a kind";
+            return $"{winnerPlayer} win with {winnerCategory}: {winnerOutput}";
         }
     }
 }
