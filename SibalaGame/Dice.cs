@@ -2,6 +2,7 @@
 {
     public class Dice
     {
-        public string Value { get; set; }
+        public string Output { get; set; }
+        public int Value { get; set; }
     }
 }
