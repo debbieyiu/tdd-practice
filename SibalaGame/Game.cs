@@ -11,6 +11,11 @@ namespace SibalaGame
             var dice1 = players[0].Dices.First();
             var dice2 = players[1].Dices.First();
 
+            if (dice1.Value == dice2.Value)
+            {
+                return "Tie";
+            }
+
             string winnerPlayer;
             string winnerOutput;
             if (dice1.Value > dice2.Value)
