@@ -16,22 +16,24 @@ namespace SibalaGame
             {
                 return "Tie";
             }
-
-            string winnerPlayer;
-            string winnerOutput;
-            if (compareResult > 0)
-            {
-                winnerPlayer = players[0].Name;
-                winnerOutput = players[0].Dices.First().Value.ToString();
-            }
             else
             {
-                winnerPlayer = players[1].Name;
-                winnerOutput = players[1].Dices.First().Value.ToString();
-            }
+                string winnerPlayer;
+                string winnerOutput;
+                if (compareResult > 0)
+                {
+                    winnerPlayer = players[0].Name;
+                    winnerOutput = dice1.Output;
+                }
+                else
+                {
+                    winnerPlayer = players[1].Name;
+                    winnerOutput = dice2.Output;
+                }
 
-            var winnerCategory = "all of a kind";
-            return $"{winnerPlayer} win with {winnerCategory}: {winnerOutput}";
+                var winnerCategory = "all of a kind";
+                return $"{winnerPlayer} win with {winnerCategory}: {winnerOutput}";
+            }
         }
     }
 }
