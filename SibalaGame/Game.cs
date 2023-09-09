@@ -12,11 +12,7 @@ namespace SibalaGame
             var dice2 = players[1].Dices.First();
 
             var compareResult = dice1.Value - dice2.Value;
-            if (compareResult == 0)
-            {
-                return "Tie";
-            }
-            else
+            if (compareResult != 0)
             {
                 string winnerPlayer;
                 string winnerOutput;
@@ -34,6 +30,8 @@ namespace SibalaGame
                 var winnerCategory = "all of a kind";
                 return $"{winnerPlayer} win with {winnerCategory}: {winnerOutput}";
             }
+
+            return "Tie";
         }
     }
 }
