@@ -1,9 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace SibalaGame
+﻿namespace SibalaGame
 {
-    public class Game
+    public class Game : AllOfAKindComparer
     {
         public string ShowResult(string input)
         {
@@ -12,7 +9,8 @@ namespace SibalaGame
             var dices1 = players[0].Dices;
             var dices2 = players[1].Dices;
 
-            var compareResult = Compare(dices1, dices2, out var winnerOutput);
+            var allOfAKindComparer = new AllOfAKindComparer();
+            var compareResult = allOfAKindComparer.Compare(dices1, dices2, out var winnerOutput);
 
             if (compareResult != 0)
             {
@@ -22,18 +20,6 @@ namespace SibalaGame
             }
 
             return "Tie";
-        }
-
-        private static int Compare(List<Dice> dices1, List<Dice> dices2, out string winnerOutput)
-        {
-            winnerOutput = null;
-            var compareResult = dices1.First().Value - dices2.First().Value;
-            if (compareResult != 0)
-            {
-                winnerOutput = compareResult > 0 ? dices1.First().Output : dices2.First().Output;
-            }
-
-            return compareResult;
         }
     }
 }
