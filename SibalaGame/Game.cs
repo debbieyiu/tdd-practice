@@ -14,27 +14,9 @@ namespace SibalaGame
             var compareResult = dice1.Value - dice2.Value;
             if (compareResult != 0)
             {
-                string winnerPlayer;
-                if (compareResult > 0)
-                {
-                    winnerPlayer = players[0].Name;
-                }
-                else
-                {
-                    winnerPlayer = players[1].Name;
-                }
-
-                string winnerOutput;
-                if (compareResult > 0)
-                {
-                    winnerOutput = dice1.Output;
-                }
-                else
-                {
-                    winnerOutput = dice2.Output;
-                }
-
+                var winnerPlayer = compareResult > 0 ? players[0].Name : players[1].Name;
                 var winnerCategory = "all of a kind";
+                var winnerOutput = compareResult > 0 ? dice1.Output : dice2.Output;
                 return $"{winnerPlayer} win with {winnerCategory}: {winnerOutput}";
             }
 
