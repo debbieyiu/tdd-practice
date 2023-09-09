@@ -15,15 +15,22 @@ namespace SibalaGame
             if (compareResult != 0)
             {
                 string winnerPlayer;
-                string winnerOutput;
                 if (compareResult > 0)
                 {
                     winnerPlayer = players[0].Name;
-                    winnerOutput = dice1.Output;
                 }
                 else
                 {
                     winnerPlayer = players[1].Name;
+                }
+
+                string winnerOutput;
+                if (compareResult > 0)
+                {
+                    winnerOutput = dice1.Output;
+                }
+                else
+                {
                     winnerOutput = dice2.Output;
                 }
 
