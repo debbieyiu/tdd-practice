@@ -11,14 +11,15 @@ namespace SibalaGame
             var dice1 = players[0].Dices.First();
             var dice2 = players[1].Dices.First();
 
-            if (dice1.Value == dice2.Value)
+            var compareResult = dice1.Value - dice2.Value;
+            if (compareResult == 0)
             {
                 return "Tie";
             }
 
             string winnerPlayer;
             string winnerOutput;
-            if (dice1.Value > dice2.Value)
+            if (compareResult > 0)
             {
                 winnerPlayer = players[0].Name;
                 winnerOutput = players[0].Dices.First().Value.ToString();
