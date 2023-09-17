@@ -10,12 +10,13 @@
             var dices2 = players[1].Dices;
 
             var allOfAKindComparer = new AllOfAKindComparer();
-            var compareResult = allOfAKindComparer.Compare(dices1, dices2, out var winnerOutput);
+            var compareResult = allOfAKindComparer.Compare(dices1, dices2);
 
             if (compareResult != 0)
             {
                 var winnerPlayer = compareResult > 0 ? players[0].Name : players[1].Name;
-                var winnerCategory = "all of a kind";
+                var winnerCategory = allOfAKindComparer.WinnerCategoryDisplay;
+                var winnerOutput = allOfAKindComparer.WinnerOutputDisplay;
                 return $"{winnerPlayer} win with {winnerCategory}: {winnerOutput}";
             }
 
