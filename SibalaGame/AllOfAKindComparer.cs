@@ -8,7 +8,7 @@ namespace SibalaGame
         public string WinnerCategoryDisplay { get; set; } = "all of a kind";
         public string WinnerOutputDisplay { get; set; }
 
-        public int Compare(List<Dice> dices1, List<Dice> dices2)
+        public int Compare(IList<Dice> dices1, IList<Dice> dices2)
         {
             var valueOrdering = new List<int> { 2, 3, 5, 6, 4, 1 };
             var dice1ValueIndex = valueOrdering.IndexOf(dices1.First().Value);

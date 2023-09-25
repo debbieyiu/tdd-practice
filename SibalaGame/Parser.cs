@@ -20,7 +20,7 @@ namespace SibalaGame
         {
             var player1Block = playerBlocks[index].Split(":", StringSplitOptions.RemoveEmptyEntries);
             var player1Name = player1Block.First();
-            var player1Dices = player1Block.Last()
+            IList<Dice> player1Dices = player1Block.Last()
                 .Split(" ", StringSplitOptions.RemoveEmptyEntries)
                 .Select(s => new Dice { Value = int.Parse(s), Output = s })
                 .ToList();
