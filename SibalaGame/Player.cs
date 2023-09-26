@@ -4,7 +4,7 @@ namespace SibalaGame
 {
     public class Player
     {
-        public IList<Dice> Dices { get; set; }
+        public Dices Dices { get; set; }
         public string Name { get; set; }
     }
 }

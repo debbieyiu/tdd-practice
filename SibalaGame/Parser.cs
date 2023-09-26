@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -19,17 +20,14 @@ namespace SibalaGame
         private static Player GetPlayer(string[] playerBlocks, int index)
         {
             var player1Block = playerBlocks[index].Split(":", StringSplitOptions.RemoveEmptyEntries);
-            var player1Name = player1Block.First();
-            IList<Dice> player1Dices = player1Block.Last()
-                .Split(" ", StringSplitOptions.RemoveEmptyEntries)
-                .Select(s => new Dice { Value = int.Parse(s), Output = s })
-                .ToList();
-            var player1 = new Player
+            return new Player
             {
-                Name = player1Name,
-                Dices = player1Dices
+                Name = player1Block.First(),
+                Dices = new Dices(player1Block.Last()
+                    .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+                    .Select(s => new Dice { Value = int.Parse(s), Output = s })
+                    .ToList())
             };
-            return player1;
         }
     }
 }
