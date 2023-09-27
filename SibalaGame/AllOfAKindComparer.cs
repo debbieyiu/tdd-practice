@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 
 namespace SibalaGame
 {
@@ -16,7 +15,7 @@ namespace SibalaGame
             var compareResult = dices1CompareValue - dices2CompareValue;
             if (compareResult != 0)
             {
-                WinnerOutputDisplay = compareResult > 0 ? dices1.First().Output : dices2.First().Output;
+                WinnerOutputDisplay = compareResult > 0 ? dices1.GetDicesOutputDisplay() : dices2.First().Output;
             }
 
             return compareResult;
