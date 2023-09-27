@@ -10,13 +10,10 @@ namespace SibalaGame
 
         public int Compare(Dices dices1, Dices dices2)
         {
-            var valueOrdering = new List<int> { 2, 3, 5, 6, 4, 1 };
-            var dice1ValueIndex = valueOrdering.IndexOf(dices1.First().Value);
-            var dice2ValueIndex = valueOrdering.IndexOf(dices2.First().Value);
-
             var dices1CompareValue = dices1.GetDicesCompareValue();
+            var dices2CompareValue = dices2.GetDicesCompareValue();
 
-            var compareResult = dices1CompareValue - dice2ValueIndex;
+            var compareResult = dices1CompareValue - dices2CompareValue;
             if (compareResult != 0)
             {
                 WinnerOutputDisplay = compareResult > 0 ? dices1.First().Output : dices2.First().Output;
