@@ -15,7 +15,7 @@ namespace SibalaGame
             var compareResult = dices1CompareValue - dices2CompareValue;
             if (compareResult != 0)
             {
-                WinnerOutputDisplay = compareResult > 0 ? dices1.GetDicesOutputDisplay() : dices2.First().Output;
+                WinnerOutputDisplay = compareResult > 0 ? dices1.GetDicesOutputDisplay() : dices2.GetDicesOutputDisplay();
             }
 
             return compareResult;
