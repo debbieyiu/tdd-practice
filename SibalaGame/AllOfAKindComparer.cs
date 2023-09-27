@@ -14,7 +14,9 @@ namespace SibalaGame
             var dice1ValueIndex = valueOrdering.IndexOf(dices1.First().Value);
             var dice2ValueIndex = valueOrdering.IndexOf(dices2.First().Value);
 
-            var compareResult = dice1ValueIndex - dice2ValueIndex;
+            var dices1CompareValue = dices1.GetDicesCompareValue();
+
+            var compareResult = dices1CompareValue - dice2ValueIndex;
             if (compareResult != 0)
             {
                 WinnerOutputDisplay = compareResult > 0 ? dices1.First().Output : dices2.First().Output;
