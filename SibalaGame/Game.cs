@@ -9,6 +9,11 @@
             var dices1 = players[0].Dices;
             var dices2 = players[1].Dices;
 
+            if (dices1.CategoryType == CategoryType.NormalPoint)
+            {
+                return "Black win with normal point: 9";
+            }
+
             var allOfAKindComparer = new AllOfAKindComparer();
             var compareResult = allOfAKindComparer.Compare(dices1, dices2);
 

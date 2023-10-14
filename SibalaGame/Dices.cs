@@ -10,6 +10,18 @@ namespace SibalaGame
         {
         }
 
+        public CategoryType CategoryType => GetCategoryType();
+
+        private CategoryType GetCategoryType()
+        {
+            if (this.GroupBy(dice => dice.Value).Count() > 1)
+            {
+                return CategoryType.NormalPoint;
+            }
+
+            return CategoryType.AllOfAKind;
+        }
+
         public int GetCompareValue()
         {
             var valueOrdering = new List<int> { 2, 3, 5, 6, 4, 1 };
