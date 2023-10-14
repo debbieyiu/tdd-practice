@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 
 namespace SibalaGame
 {
@@ -10,9 +9,8 @@ namespace SibalaGame
 
         public int Compare(Dices dices1, Dices dices2)
         {
-            var valueOrdering = new List<int> { 2, 3, 5, 6, 4, 1 };
-            var dice1ValueIndex = valueOrdering.IndexOf(dices1.First().Value);
-            var dice2ValueIndex = valueOrdering.IndexOf(dices2.First().Value);
+            var dice1ValueIndex = dices1.GetCompareValue();
+            var dice2ValueIndex = dices2.GetCompareValue();
 
             var compareResult = dice1ValueIndex - dice2ValueIndex;
             if (compareResult != 0)
