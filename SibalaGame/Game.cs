@@ -11,7 +11,10 @@
 
             if (dices1.CategoryType == CategoryType.NormalPoint)
             {
-                return "Black win with normal point: 9";
+                var winnerPlayer = "Black";
+                var winnerCategory = "normal point";
+                var winnerOutput = "9";
+                return $"{winnerPlayer} win with {winnerCategory}: {winnerOutput}";
             }
 
             var allOfAKindComparer = new AllOfAKindComparer();
