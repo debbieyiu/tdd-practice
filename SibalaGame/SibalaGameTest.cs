@@ -27,6 +27,13 @@ namespace SibalaGame
             AssertShowResultShouldReturn(input, expected);
         }
 
+        [Test]
+        [TestCase("Black: 2 6 2 3  White: 5 3 5 4", "Black win with normal point: 9")]
+        public void A02_Both_NormalPoint(string input, string expected)
+        {
+            AssertShowResultShouldReturn(input, expected);
+        }
+
         private void AssertShowResultShouldReturn(string input, string expected)
         {
             var actual = _target.ShowResult(input);
