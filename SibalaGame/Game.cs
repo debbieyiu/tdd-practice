@@ -1,4 +1,6 @@
-﻿namespace SibalaGame
+﻿using System.Linq;
+
+namespace SibalaGame
 {
     public class Game : AllOfAKindComparer
     {
@@ -11,9 +13,9 @@
 
             if (dices1.CategoryType == CategoryType.NormalPoint)
             {
-                var winnerPlayer = "Black";
+                var winnerPlayer = players[0].Name;
                 var winnerCategory = "normal point";
-                var winnerOutput = "9";
+                var winnerOutput = dices1.GetCompareValue();
                 return $"{winnerPlayer} win with {winnerCategory}: {winnerOutput}";
             }
 
