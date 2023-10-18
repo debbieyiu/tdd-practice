@@ -14,7 +14,7 @@ namespace SibalaGame
 
         private CategoryType GetCategoryType()
         {
-            if (this.GroupBy(dice => dice.Value).Count() > 1)
+            if (DiceGrouping.Count() > 1)
             {
                 return CategoryType.NormalPoint;
             }
@@ -26,8 +26,7 @@ namespace SibalaGame
         {
             if (CategoryType == CategoryType.NormalPoint)
             {
-                var pairDices = this
-                    .GroupBy(dice => dice.Value)
+                var pairDices = DiceGrouping
                     .OrderBy(grouping => grouping.Key)
                     .First(grouping => grouping.Count() == 2)
                     .ToList();
@@ -36,6 +35,15 @@ namespace SibalaGame
 
             var valueOrdering = new List<int> { 2, 3, 5, 6, 4, 1 };
             return valueOrdering.IndexOf(this.First().Value);
+        }
+
+        private IEnumerable<IGrouping<int, Dice>> DiceGrouping
+        {
+            get
+            {
+                return this
+                    .GroupBy(dice => dice.Value);
+            }
         }
     }
 }
