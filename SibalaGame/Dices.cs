@@ -26,7 +26,11 @@ namespace SibalaGame
         {
             if (CategoryType == CategoryType.NormalPoint)
             {
-                var pairDices = this.GroupBy(dice => dice.Value).First(grouping => grouping.Count() == 2).ToList();
+                var pairDices = this
+                    .GroupBy(dice => dice.Value)
+                    .OrderBy(grouping => grouping.Key)
+                    .First(grouping => grouping.Count() == 2)
+                    .ToList();
                 return this.Except(pairDices).Sum(dice => dice.Value);
             }
 
