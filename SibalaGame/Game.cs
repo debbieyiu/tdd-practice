@@ -13,10 +13,16 @@
             {
                 var normalPointComparer = new NormalPointComparer();
                 var compareResult2 = normalPointComparer.Compare(dices1, dices2);
-                var winnerPlayer = compareResult2 > 0 ? players[0].Name : players[1].Name;
-                var winnerCategory = normalPointComparer.WinnerCategoryDisplay;
-                var winnerOutput = normalPointComparer.WinnerOutputDisplay;
-                return $"{winnerPlayer} win with {winnerCategory}: {winnerOutput}";
+
+                if (compareResult2 != 0)
+                {
+                    var winnerPlayer = compareResult2 > 0 ? players[0].Name : players[1].Name;
+                    var winnerCategory = normalPointComparer.WinnerCategoryDisplay;
+                    var winnerOutput = normalPointComparer.WinnerOutputDisplay;
+                    return $"{winnerPlayer} win with {winnerCategory}: {winnerOutput}";
+                }
+
+                return "Tie";
             }
 
             var allOfAKindComparer = new AllOfAKindComparer();
