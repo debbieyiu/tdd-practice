@@ -30,6 +30,7 @@ namespace SibalaGame
         [Test]
         [TestCase("Black: 2 6 2 3  White: 5 3 5 4", "Black win with normal point: 9")]
         [TestCase("Black: 2 1 3 3  White: 2 2 1 3", "White win with normal point: 4")]
+        [TestCase("Black: 2 3 4 2  White: 1 1 4 3", "Tie")]
         public void A02_Both_NormalPoint(string input, string expected)
         {
             AssertShowResultShouldReturn(input, expected);
