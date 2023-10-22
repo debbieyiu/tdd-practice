@@ -37,13 +37,7 @@ namespace SibalaGame
             return valueOrdering.IndexOf(this.First().Value);
         }
 
-        private IEnumerable<IGrouping<int, Dice>> DiceGrouping
-        {
-            get
-            {
-                return this
-                    .GroupBy(dice => dice.Value);
-            }
-        }
+        private IEnumerable<IGrouping<int, Dice>> DiceGrouping => this.GroupBy(dice => dice.Value);
+        
     }
 }
