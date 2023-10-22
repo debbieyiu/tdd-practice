@@ -9,6 +9,11 @@
             var dices1 = players[0].Dices;
             var dices2 = players[1].Dices;
 
+            if (dices1.CategoryType != dices2.CategoryType)
+            {
+                return "Black win with all of a kind: 5";
+            }
+
             if (dices1.CategoryType == CategoryType.NormalPoint)
             {
                 var normalPointComparer = new NormalPointComparer();
