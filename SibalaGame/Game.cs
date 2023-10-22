@@ -1,4 +1,6 @@
-﻿namespace SibalaGame
+﻿using System.Collections.Generic;
+
+namespace SibalaGame
 {
     public class Game : AllOfAKindComparer
     {
@@ -16,7 +18,7 @@
 
             if (dices1.CategoryType == CategoryType.NormalPoint)
             {
-                var normalPointComparer = new NormalPointComparer();
+                ICompare normalPointComparer = new NormalPointComparer();
                 var compareResult2 = normalPointComparer.Compare(dices1, dices2);
 
                 if (compareResult2 != 0)

@@ -2,7 +2,7 @@
 
 namespace SibalaGame
 {
-    public class NormalPointComparer
+    public class NormalPointComparer : ICompare
     {
         public int Compare(Dices dices1, Dices dices2)
         {
