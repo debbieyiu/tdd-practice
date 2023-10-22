@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 
 namespace SibalaGame
 {
@@ -16,16 +17,17 @@ namespace SibalaGame
                 return "Black win with all of a kind: 5";
             }
 
+            ICompare comparer;
             if (dices1.CategoryType == CategoryType.NormalPoint)
             {
-                var normalPointComparer = new NormalPointComparer();
-                var compareResult2 = normalPointComparer.Compare(dices1, dices2);
+                comparer = new NormalPointComparer();
+                var compareResult2 = comparer.Compare(dices1, dices2);
 
                 if (compareResult2 != 0)
                 {
                     var winnerPlayer = compareResult2 > 0 ? players[0].Name : players[1].Name;
-                    var winnerCategory = normalPointComparer.WinnerCategoryDisplay;
-                    var winnerOutput = normalPointComparer.WinnerOutputDisplay;
+                    var winnerCategory = comparer.WinnerCategoryDisplay;
+                    var winnerOutput = comparer.WinnerOutputDisplay;
                     return $"{winnerPlayer} win with {winnerCategory}: {winnerOutput}";
                 }
 
@@ -33,14 +35,14 @@ namespace SibalaGame
             }
             else
             {
-                var allOfAKindComparer = new AllOfAKindComparer();
-                var compareResult = allOfAKindComparer.Compare(dices1, dices2);
+                comparer = new AllOfAKindComparer();
+                var compareResult = comparer.Compare(dices1, dices2);
 
                 if (compareResult != 0)
                 {
                     var winnerPlayer = compareResult > 0 ? players[0].Name : players[1].Name;
-                    var winnerCategory = allOfAKindComparer.WinnerCategoryDisplay;
-                    var winnerOutput = allOfAKindComparer.WinnerOutputDisplay;
+                    var winnerCategory = comparer.WinnerCategoryDisplay;
+                    var winnerOutput = comparer.WinnerOutputDisplay;
                     return $"{winnerPlayer} win with {winnerCategory}: {winnerOutput}";
                 }
 
