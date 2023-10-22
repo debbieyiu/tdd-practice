@@ -2,9 +2,10 @@
 
 namespace SibalaGame
 {
-    public class AllOfAKindComparer
+    public class AllOfAKindComparer : ICompare
     {
-        public string WinnerCategoryDisplay { get; set; } = "all of a kind";
+        public string WinnerCategoryDisplay => "all of a kind";
+
         public string WinnerOutputDisplay { get; set; }
 
         public int Compare(Dices dices1, Dices dices2)
