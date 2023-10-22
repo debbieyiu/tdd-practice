@@ -18,37 +18,25 @@ namespace SibalaGame
             }
 
             ICompare comparer;
-            int compareResult;
             if (dices1.CategoryType == CategoryType.NormalPoint)
             {
                 comparer = new NormalPointComparer();
-                compareResult = comparer.Compare(dices1, dices2);
-
-                if (compareResult != 0)
-                {
-                    var winnerPlayer = compareResult > 0 ? players[0].Name : players[1].Name;
-                    var winnerCategory = comparer.WinnerCategoryDisplay;
-                    var winnerOutput = comparer.WinnerOutputDisplay;
-                    return $"{winnerPlayer} win with {winnerCategory}: {winnerOutput}";
-                }
-
-                return "Tie";
             }
             else
             {
                 comparer = new AllOfAKindComparer();
-                compareResult = comparer.Compare(dices1, dices2);
-
-                if (compareResult != 0)
-                {
-                    var winnerPlayer = compareResult > 0 ? players[0].Name : players[1].Name;
-                    var winnerCategory = comparer.WinnerCategoryDisplay;
-                    var winnerOutput = comparer.WinnerOutputDisplay;
-                    return $"{winnerPlayer} win with {winnerCategory}: {winnerOutput}";
-                }
-
-                return "Tie";
             }
+
+            var compareResult = comparer.Compare(dices1, dices2);
+            if (compareResult != 0)
+            {
+                var winnerPlayer = compareResult > 0 ? players[0].Name : players[1].Name;
+                var winnerCategory = comparer.WinnerCategoryDisplay;
+                var winnerOutput = comparer.WinnerOutputDisplay;
+                return $"{winnerPlayer} win with {winnerCategory}: {winnerOutput}";
+            }
+
+            return "Tie";
         }
     }
 }
