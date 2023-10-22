@@ -18,14 +18,15 @@ namespace SibalaGame
             }
 
             ICompare comparer;
+            int compareResult;
             if (dices1.CategoryType == CategoryType.NormalPoint)
             {
                 comparer = new NormalPointComparer();
-                var compareResult2 = comparer.Compare(dices1, dices2);
+                compareResult = comparer.Compare(dices1, dices2);
 
-                if (compareResult2 != 0)
+                if (compareResult != 0)
                 {
-                    var winnerPlayer = compareResult2 > 0 ? players[0].Name : players[1].Name;
+                    var winnerPlayer = compareResult > 0 ? players[0].Name : players[1].Name;
                     var winnerCategory = comparer.WinnerCategoryDisplay;
                     var winnerOutput = comparer.WinnerOutputDisplay;
                     return $"{winnerPlayer} win with {winnerCategory}: {winnerOutput}";
@@ -36,7 +37,7 @@ namespace SibalaGame
             else
             {
                 comparer = new AllOfAKindComparer();
-                var compareResult = comparer.Compare(dices1, dices2);
+                compareResult = comparer.Compare(dices1, dices2);
 
                 if (compareResult != 0)
                 {
