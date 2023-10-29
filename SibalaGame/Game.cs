@@ -12,19 +12,21 @@ namespace SibalaGame
             var dices1 = players[0].Dices;
             var dices2 = players[1].Dices;
 
+            ICompare comparer;
             if (dices1.CategoryType != dices2.CategoryType)
             {
-                return "Black win with all of a kind: 5";
-            }
-
-            ICompare comparer;
-            if (dices1.CategoryType == CategoryType.NormalPoint)
-            {
-                comparer = new NormalPointComparer();
+                comparer = new DifferentCategoryComparer();
             }
             else
             {
-                comparer = new AllOfAKindComparer();
+                if (dices1.CategoryType == CategoryType.NormalPoint)
+                {
+                    comparer = new NormalPointComparer();
+                }
+                else
+                {
+                    comparer = new AllOfAKindComparer();
+                }
             }
 
             var compareResult = comparer.Compare(dices1, dices2);
