@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace SibalaGame
@@ -38,6 +39,15 @@ namespace SibalaGame
         }
 
         private IEnumerable<IGrouping<int, Dice>> DiceGrouping => this.GroupBy(dice => dice.Value);
-        
+
+        public string GetOutputDisplay()
+        {
+            if (CategoryType == CategoryType.AllOfAKind)
+            {
+                return this.First().Value.ToString();
+            }
+
+            throw new NotImplementedException();
+        }
     }
 }
