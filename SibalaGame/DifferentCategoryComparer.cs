@@ -15,7 +15,7 @@ namespace SibalaGame
 
                 WinnerOutputDisplay = compareResult > 0
                     ? dices1.GetOutputDisplay()
-                    : dices2.GetCompareValue().ToString();
+                    : dices2.GetOutputDisplay();
             }
             return compareResult;
         }
