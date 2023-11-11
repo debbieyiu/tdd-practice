@@ -48,6 +48,13 @@ namespace SibalaGame
             AssertShowResultShouldReturn(input, expected);
         }
 
+        [Test]
+        [TestCase("Black: 3 5 5 5  White: 4 1 3 6", "Tie")]
+        public void A04_Both_NoPoint(string input, string expected)
+        {
+            AssertShowResultShouldReturn(input, expected);
+        }
+
         private void AssertShowResultShouldReturn(string input, string expected)
         {
             var actual = _target.ShowResult(input);
