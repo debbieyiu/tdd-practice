@@ -34,7 +34,7 @@ namespace SibalaGame
             {
                 var pairDices = DiceGrouping
                     .OrderBy(grouping => grouping.Key)
-                    .First(grouping => grouping.Count() == 2)
+                    .First(grouping => grouping.Count() >= 2)
                     .ToList();
                 return this.Except(pairDices).Sum(dice => dice.Value);
             }
