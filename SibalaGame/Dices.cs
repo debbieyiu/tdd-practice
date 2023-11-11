@@ -15,6 +15,11 @@ namespace SibalaGame
 
         private CategoryType GetCategoryType()
         {
+            if (DiceGrouping.Count() == 4)
+            {
+                return CategoryType.NoPoint;
+            }
+
             if (DiceGrouping.Count() > 1)
             {
                 return CategoryType.NormalPoint;
@@ -47,7 +52,7 @@ namespace SibalaGame
                 return this.First().Value.ToString();
             }
 
-            throw new NotImplementedException();
+            return GetCompareValue().ToString();
         }
     }
 }
