@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace SibalaGame
@@ -15,17 +14,17 @@ namespace SibalaGame
 
         private CategoryType GetCategoryType()
         {
-            if (DiceGrouping.Count() == 4)
+            if (DiceGrouping.Count() == 1)
             {
-                return CategoryType.NoPoint;
+                return CategoryType.AllOfAKind;
             }
 
-            if (DiceGrouping.Count() > 1)
+            if (DiceGrouping.Count(grouping => grouping.Count() == 2) >= 1)
             {
                 return CategoryType.NormalPoint;
             }
 
-            return CategoryType.AllOfAKind;
+            return CategoryType.NoPoint;
         }
 
         public int GetCompareValue()

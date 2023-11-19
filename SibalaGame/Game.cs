@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-
-namespace SibalaGame
+﻿namespace SibalaGame
 {
     public class Game : AllOfAKindComparer
     {
@@ -19,13 +16,19 @@ namespace SibalaGame
             }
             else
             {
-                if (dices1.CategoryType == CategoryType.NormalPoint)
+                var diceCategory = dices1.CategoryType;
+                switch (diceCategory)
                 {
-                    comparer = new NormalPointComparer();
-                }
-                else
-                {
-                    comparer = new AllOfAKindComparer();
+                    case CategoryType.NormalPoint:
+                        comparer = new NormalPointComparer();
+                        break;
+
+                    case CategoryType.AllOfAKind:
+                        comparer = new AllOfAKindComparer();
+                        break;
+
+                    default:
+                        return "Tie";
                 }
             }
 
