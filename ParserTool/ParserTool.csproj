@@ -102,6 +102,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Setting\ThirdParty\SDPayUserList.xml" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -151,6 +152,47 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="App_Data\WithdrawalBankList.json" />
+    <Content Include="App_Data\Setting\ThirdParty\AeePayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\AllpassPayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\BigPayzWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\BixinPayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\CapitalPayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\CashRuPayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\DBINPayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\DfPayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\DirePayFiatWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\DirePayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\DouDouPayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\DsPayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\EchelonPayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\EeziePayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\EPayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\GameWalletWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\GenkinPayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\Help2PayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\JustPayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\NeomPayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\NewCapitalPayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\NewHaoPayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\NewXfuooUsdtWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\NewxyPayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\OOPayNewWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\OOPayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\PandaPayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\Paygate10WithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\PaykassmaWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\RarepidPayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\S88PayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\SDPayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\Sev7PayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\SmartPayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\SpeedPayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\TLPayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\Viet2PayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\VNPayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\XPayWithdrawalSetting.config" />
+    <Content Include="App_Data\Setting\ThirdParty\_1ClickPayWithdrawalSetting.config" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -197,6 +239,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Libraries\Modules\ConfigType.cs" />
+    <Compile Include="Libraries\Modules\ModuleBase.cs" />
+    <Compile Include="Libraries\Modules\Singleton.cs" />
+    <Compile Include="Libraries\Modules\WithdrawalBankList\BankInfo.cs" />
+    <Compile Include="Libraries\Modules\WithdrawalBankList\CryptoCurrency.cs" />
+    <Compile Include="Libraries\Modules\WithdrawalBankList\ModeInfo.cs" />
+    <Compile Include="Libraries\Modules\WithdrawalBankList\PaymentEnable.cs" />
+    <Compile Include="Libraries\Modules\WithdrawalBankList\PaymentInfoByCurrency.cs" />
+    <Compile Include="Libraries\Modules\WithdrawalBankList\SupportBankList.cs" />
+    <Compile Include="Libraries\Modules\WithdrawalBankList\SupportPayment.cs" />
+    <Compile Include="Libraries\Modules\WithdrawalBankList\WithdrawalBankListConfig.cs" />
+    <Compile Include="Libraries\Modules\WithdrawalBankList\WithdrawalBankListConfigHelper.cs" />
+    <Compile Include="Libraries\Serialize\JsonConverter.cs" />
+    <Compile Include="Libraries\Serialize\XmlConverter.cs" />
     <Compile Include="ParserTool.aspx.cs">
       <DependentUpon>ParserTool.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -226,9 +282,6 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

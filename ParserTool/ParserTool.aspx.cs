@@ -1,4 +1,5 @@
 ﻿using System;
+using ParserTool.Libraries.Modules.WithdrawalBankList;
 
 namespace ParserTool
 {
@@ -6,6 +7,8 @@ namespace ParserTool
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            var withdrawalConfig = WithdrawalBankListConfigHelper.Instance.Config.PaymentEnable;
+
             txtResult.Text = "test";
         }
     }
