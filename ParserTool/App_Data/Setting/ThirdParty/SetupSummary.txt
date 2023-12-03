@@ -1,135 +1,143 @@
 ﻿== NONE ==
-_1ClickPay		110001vnd		NONE
-AeePay			126301			NONE
-CapitalPay		122208			NONE
-				122300
-DBINPay			118708			NONE
-EchelonPay		122708			NONE
-				122905
-				123503
-EeziePay		100202myr		NONE
-				98705thb
-				99408idr
-				103500vnd
-JustPay			108902thb		NONE
-				103901vnd
-OOPayNew		125606			NONE
-				125605
-OOPay			118506			NONE
-				90709
-PandaPay		125700			NONE
-RarepidPay		125507			NONE
-S88Pay			122809			NONE
-				122606
-XPay			98107thb		NONE
-				102203vnd
-				103600vnd
-				125904khr
+		_1ClickPay		110001vnd		NONE
+		AeePay			126301			NONE
+		CapitalPay		122208			NONE
+						122300
+		DBINPay			118708			NONE
+		EchelonPay		122708			NONE
+						122905
+						123503
+		EeziePay		100202myr		NONE
+						98705thb
+						99408idr
+						103500vnd
+		JustPay			108902thb		NONE
+						103901vnd
+		OOPayNew		125606			NONE
+						125605
+		OOPay			118506			NONE
+						90709
+		PandaPay		125700			NONE
+		RarepidPay		125507			NONE
+		S88Pay			122809			NONE
+						122606
+		XPay			98107thb		NONE
+						102203vnd
+						103600vnd
+						125904khr
 
 == JSON ==
-AllpassPay		96004			<ChargeFeeSetting>{"Rate":0.012,"ExternalFee":1.00}</ChargeFeeSetting>
-BigPayz			100404			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
-				118306			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
-				121907			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
-				124104			<ChargeFeeSetting>{"Rate":0.025}</ChargeFeeSetting>
-BixinPay		104604			<ChargeFeeSetting>{"BaseFee":5.00}</ChargeFeeSetting>
-				104606			<ChargeFeeSetting>{"BaseFee":5.00}</ChargeFeeSetting>
-				106008			<ChargeFeeSetting>{"BaseFee":5.00}</ChargeFeeSetting>
-				106100			<ChargeFeeSetting>{"BaseFee":5.00}</ChargeFeeSetting>
-				114803			<ChargeFeeSetting>{"BaseFee":5.00}</ChargeFeeSetting>
-				114906			<ChargeFeeSetting>{"BaseFee":5.00}</ChargeFeeSetting>
-				114907			<ChargeFeeSetting>{"BaseFee":5.00}</ChargeFeeSetting>
-				114908			<ChargeFeeSetting>{"BaseFee":5.00}</ChargeFeeSetting>
-				90006			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
-				90100			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
-				90101			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
-				90102			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
-				86901			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
-				86902			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
-				87800			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
-				87907			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
-				87909			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
-CashRuPay		125608			<ChargeFeeSetting>{"Rate":0.035}</ChargeFeeSetting>
-DfPay			124208			<ChargeFeeSetting>{"Rate":0.02,"ExternalFee":2.00}</ChargeFeeSetting>
-				124209			<ChargeFeeSetting>{"Rate":0.02,"ExternalFee":2.00}</ChargeFeeSetting>
-				124300			<ChargeFeeSetting>{"Rate":0.02,"ExternalFee":2.00}</ChargeFeeSetting>
-				124301			<ChargeFeeSetting>{"Rate":0.02,"ExternalFee":2.00}</ChargeFeeSetting>
-				105705			<ChargeFeeSetting>{"Rate":0.02,"ExternalFee":2.00}</ChargeFeeSetting>
-				105708			<ChargeFeeSetting>{"Rate":0.02,"ExternalFee":2.00}</ChargeFeeSetting>
-				105806			<ChargeFeeSetting>{"Rate":0.02,"ExternalFee":2.00}</ChargeFeeSetting>
-				105900			<ChargeFeeSetting>{"Rate":0.02,"ExternalFee":2.00}</ChargeFeeSetting>
-DirePayFiat		122209			<ChargeFeeSetting>{"Rate":0.008}</ChargeFeeSetting>
-				113507			<ChargeFeeSetting>{"Rate":0.008}</ChargeFeeSetting>
-				126204			<ChargeFeeSetting>{"Rate":0.07}</ChargeFeeSetting>
-DouDouPay		125006			<ChargeFeeSetting>{"BaseFee":2}</ChargeFeeSetting>
-DsPay			125407			<ChargeFeeSetting>{"BaseFee":100}</ChargeFeeSetting>
-EPay			126205			<ChargeFeeSetting>{"Rate":0.03}</ChargeFeeSetting>
-GameWallet		109308thb		<ChargeFeeSetting>{"Rate":0.1}</ChargeFeeSetting>
-				110200vnd		<ChargeFeeSetting>{"Rate":0.1}</ChargeFeeSetting>
-GenkinPay		126107			<ChargeFeeSetting>{"Rate":0.031}</ChargeFeeSetting>
-Help2Pay		myr				<ChargeFeeSetting>{"BaseFee":5.00}</ChargeFeeSetting>
-				thb				<ChargeFeeSetting>{"BaseFee":5.00}</ChargeFeeSetting>
-				idr				<ChargeFeeSetting>{"BaseFee":5.00}</ChargeFeeSetting>
-NeomPay			122604			<ChargeFeeSetting>{"Rate":0.025}</ChargeFeeSetting>
-NewCapitalPay	122408			<ChargeFeeSetting>{"Rate":0.005}</ChargeFeeSetting>
-NewHaoPay		116506			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
-				116508			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
-				116509			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
-				116600			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
-				116601			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
-				115505			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
-NewxyPay		106601			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-				106400			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-				105805			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-				104208			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-				97709			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-				97401			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-				114202			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-				114302			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-				124904			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-				124905			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-				124906			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-				124907			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-				124908			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-				124909			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-				114403			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
-				114404			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
-				114405			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
-				114504			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
-				114506			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
-				114609			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
-				114706			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
-				115201			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
-Paygate10		122902			<ChargeFeeSetting>{"Rate":0.0625}</ChargeFeeSetting>
-Paykassma		125602			<ChargeFeeSetting>{"Rate":0.04,"ExternalFee":7.00}</ChargeFeeSetting>
-				126208			<ChargeFeeSetting>{"Rate":0.03}</ChargeFeeSetting>
-				126209			<ChargeFeeSetting>{"Rate":0.03}</ChargeFeeSetting>
-				126300			<ChargeFeeSetting>{"Rate":0.03}</ChargeFeeSetting>
-SDPay			70507rmb		<ChargeFeeSetting>{"Rate":0.01, "BaseFee":0}</ChargeFeeSetting>
-				104300rmb		<ChargeFeeSetting>{"Rate":0.01, "BaseFee":0}</ChargeFeeSetting>
-				104301rmb		<ChargeFeeSetting>{"Rate":0.01, "BaseFee":0}</ChargeFeeSetting>
-Sev7Pay			113007			<ChargeFeeSetting>{"Rate":0.015}</ChargeFeeSetting>
-SmartPay		122206			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
-				82100			<ChargeFeeSetting>{"Rate":0.005}</ChargeFeeSetting>
-				113504			<ChargeFeeSetting>{"Rate":0.013}</ChargeFeeSetting>
-SpeedPay		100407			<ChargeFeeSetting>{"Rate":0.006}</ChargeFeeSetting>
-				118700			<ChargeFeeSetting>{"Rate":0.005}</ChargeFeeSetting>
-TLPay			86205			<ChargeFeeSetting>{"Rate":0.015}</ChargeFeeSetting>
-Viet2Pay		86400			<ChargeFeeSetting>{"Rate":0.01}</ChargeFeeSetting>
-VNPay			110201			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
+	-- name: ModeId -- 
+		AllpassPay		96004			<ChargeFeeSetting>{"Rate":0.012,"ExternalFee":1.00}</ChargeFeeSetting>
+		BigPayz			100404			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
+						118306			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
+						121907			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
+						124104			<ChargeFeeSetting>{"Rate":0.025}</ChargeFeeSetting>
+		BixinPay		104604			<ChargeFeeSetting>{"BaseFee":5.00}</ChargeFeeSetting>
+						104606			<ChargeFeeSetting>{"BaseFee":5.00}</ChargeFeeSetting>
+						106008			<ChargeFeeSetting>{"BaseFee":5.00}</ChargeFeeSetting>
+						106100			<ChargeFeeSetting>{"BaseFee":5.00}</ChargeFeeSetting>
+						114803			<ChargeFeeSetting>{"BaseFee":5.00}</ChargeFeeSetting>
+						114906			<ChargeFeeSetting>{"BaseFee":5.00}</ChargeFeeSetting>
+						114907			<ChargeFeeSetting>{"BaseFee":5.00}</ChargeFeeSetting>
+						114908			<ChargeFeeSetting>{"BaseFee":5.00}</ChargeFeeSetting>
+						90006			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
+						90100			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
+						90101			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
+						90102			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
+						86901			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
+						86902			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
+						87800			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
+						87907			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
+						87909			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
+		CashRuPay		125608			<ChargeFeeSetting>{"Rate":0.035}</ChargeFeeSetting>
+		DfPay			124208			<ChargeFeeSetting>{"Rate":0.02,"ExternalFee":2.00}</ChargeFeeSetting>
+						124209			<ChargeFeeSetting>{"Rate":0.02,"ExternalFee":2.00}</ChargeFeeSetting>
+						124300			<ChargeFeeSetting>{"Rate":0.02,"ExternalFee":2.00}</ChargeFeeSetting>
+						124301			<ChargeFeeSetting>{"Rate":0.02,"ExternalFee":2.00}</ChargeFeeSetting>
+						105705			<ChargeFeeSetting>{"Rate":0.02,"ExternalFee":2.00}</ChargeFeeSetting>
+						105708			<ChargeFeeSetting>{"Rate":0.02,"ExternalFee":2.00}</ChargeFeeSetting>
+						105806			<ChargeFeeSetting>{"Rate":0.02,"ExternalFee":2.00}</ChargeFeeSetting>
+						105900			<ChargeFeeSetting>{"Rate":0.02,"ExternalFee":2.00}</ChargeFeeSetting>
+		DirePayFiat		122209			<ChargeFeeSetting>{"Rate":0.008}</ChargeFeeSetting>
+						113507			<ChargeFeeSetting>{"Rate":0.008}</ChargeFeeSetting>
+						126204			<ChargeFeeSetting>{"Rate":0.07}</ChargeFeeSetting>
+		DouDouPay		125006			<ChargeFeeSetting>{"BaseFee":2}</ChargeFeeSetting>
+		DsPay			125407			<ChargeFeeSetting>{"BaseFee":100}</ChargeFeeSetting>
+		EPay			126205			<ChargeFeeSetting>{"Rate":0.03}</ChargeFeeSetting>
+		GenkinPay		126107			<ChargeFeeSetting>{"Rate":0.031}</ChargeFeeSetting>
+		NeomPay			122604			<ChargeFeeSetting>{"Rate":0.025}</ChargeFeeSetting>
+		NewCapitalPay	122408			<ChargeFeeSetting>{"Rate":0.005}</ChargeFeeSetting>
+		NewHaoPay		116506			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
+						116508			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
+						116509			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
+						116600			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
+						116601			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
+						115505			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
+		NewxyPay		106601			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
+						106400			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
+						105805			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
+						104208			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
+						97709			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
+						97401			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
+						114202			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
+						114302			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
+						124904			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
+						124905			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
+						124906			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
+						124907			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
+						124908			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
+						124909			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
+						114403			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
+						114404			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
+						114405			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
+						114504			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
+						114506			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
+						114609			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
+						114706			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
+						115201			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
+		Paygate10		122902			<ChargeFeeSetting>{"Rate":0.0625}</ChargeFeeSetting>
+		Paykassma		125602			<ChargeFeeSetting>{"Rate":0.04,"ExternalFee":7.00}</ChargeFeeSetting>
+						126208			<ChargeFeeSetting>{"Rate":0.03}</ChargeFeeSetting>
+						126209			<ChargeFeeSetting>{"Rate":0.03}</ChargeFeeSetting>
+						126300			<ChargeFeeSetting>{"Rate":0.03}</ChargeFeeSetting>
+		Sev7Pay			113007			<ChargeFeeSetting>{"Rate":0.015}</ChargeFeeSetting>
+		SmartPay		122206			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
+						82100			<ChargeFeeSetting>{"Rate":0.005}</ChargeFeeSetting>
+						113504			<ChargeFeeSetting>{"Rate":0.013}</ChargeFeeSetting>
+		SpeedPay		100407			<ChargeFeeSetting>{"Rate":0.006}</ChargeFeeSetting>
+						118700			<ChargeFeeSetting>{"Rate":0.005}</ChargeFeeSetting>
+		TLPay			86205			<ChargeFeeSetting>{"Rate":0.015}</ChargeFeeSetting>
+		Viet2Pay		86400			<ChargeFeeSetting>{"Rate":0.01}</ChargeFeeSetting>
+		VNPay			110201			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
+
+	-- name: Currency --
+		Help2Pay		myr				<ChargeFeeSetting>{"BaseFee":5.00}</ChargeFeeSetting>
+						thb				<ChargeFeeSetting>{"BaseFee":5.00}</ChargeFeeSetting>
+						idr				<ChargeFeeSetting>{"BaseFee":5.00}</ChargeFeeSetting>
+
+	-- name: ModeId+Currency --
+		GameWallet		109308thb		<ChargeFeeSetting>{"Rate":0.1}</ChargeFeeSetting>
+						110200vnd		<ChargeFeeSetting>{"Rate":0.1}</ChargeFeeSetting>
+		SDPay			70507rmb		<ChargeFeeSetting>{"Rate":0.01, "BaseFee":0}</ChargeFeeSetting>
+						104300rmb		<ChargeFeeSetting>{"Rate":0.01, "BaseFee":0}</ChargeFeeSetting>
+						104301rmb		<ChargeFeeSetting>{"Rate":0.01, "BaseFee":0}</ChargeFeeSetting>
 
 == DICTIONARY ==
-DirePay			rmb				<ChargeFeeSetting>{"USDT-ERC20":{"Rate":0.01}, "USDT-TRC20":{"Rate":0.01}, "USDC-ERC20":{"Rate":0.01}, "USDC-TRC20":{"Rate":0.01} }</ChargeFeeSetting>
-				vnd				<ChargeFeeSetting>{"USDT-ERC20":{"Rate":0.01}, "USDT-TRC20":{"Rate":0.01}, "USDC-ERC20":{"Rate":0.01}, "USDC-TRC20":{"Rate":0.01} }</ChargeFeeSetting>
-				krw				<ChargeFeeSetting>{"USDT-ERC20":{"Rate":0.01}, "USDT-TRC20":{"Rate":0.01}, "USDC-ERC20":{"Rate":0.01}, "USDC-TRC20":{"Rate":0.01}, "BTC":{"Rate":0.01}}</ChargeFeeSetting>
-				inr				<ChargeFeeSetting>{"USDT-ERC20":{"Rate":0.01}, "USDT-TRC20":{"Rate":0.01}, "USDC-ERC20":{"Rate":0.01}, "USDC-TRC20":{"Rate":0.01} }</ChargeFeeSetting>
-				bdt				<ChargeFeeSetting>{"USDT-ERC20":{"Rate":0.01}, "USDT-TRC20":{"Rate":0.01}, "USDC-ERC20":{"Rate":0.01}, "USDC-TRC20":{"Rate":0.01} }</ChargeFeeSetting>
-NewXfuooUsdt	87803			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":35.00},"USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
-				114403			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
-				114404			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
-				114405			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
-				114504			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
-				114506			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
-				114609			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
-				114706			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
-				115201			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
+	-- name: ModeId -- 
+		NewXfuooUsdt	87803			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":35.00},"USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
+						114403			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
+						114404			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
+						114405			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
+						114504			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
+						114506			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
+						114609			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
+						114706			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
+						115201			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
+
+	-- name: Currency --
+		DirePay			rmb				<ChargeFeeSetting>{"USDT-ERC20":{"Rate":0.01}, "USDT-TRC20":{"Rate":0.01}, "USDC-ERC20":{"Rate":0.01}, "USDC-TRC20":{"Rate":0.01} }</ChargeFeeSetting>
+						vnd				<ChargeFeeSetting>{"USDT-ERC20":{"Rate":0.01}, "USDT-TRC20":{"Rate":0.01}, "USDC-ERC20":{"Rate":0.01}, "USDC-TRC20":{"Rate":0.01} }</ChargeFeeSetting>
+						krw				<ChargeFeeSetting>{"USDT-ERC20":{"Rate":0.01}, "USDT-TRC20":{"Rate":0.01}, "USDC-ERC20":{"Rate":0.01}, "USDC-TRC20":{"Rate":0.01}, "BTC":{"Rate":0.01}}</ChargeFeeSetting>
+						inr				<ChargeFeeSetting>{"USDT-ERC20":{"Rate":0.01}, "USDT-TRC20":{"Rate":0.01}, "USDC-ERC20":{"Rate":0.01}, "USDC-TRC20":{"Rate":0.01} }</ChargeFeeSetting>
+						bdt				<ChargeFeeSetting>{"USDT-ERC20":{"Rate":0.01}, "USDT-TRC20":{"Rate":0.01}, "USDC-ERC20":{"Rate":0.01}, "USDC-TRC20":{"Rate":0.01} }</ChargeFeeSetting>
