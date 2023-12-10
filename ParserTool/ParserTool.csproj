@@ -242,11 +242,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Libraries\Models\CryptoCurrency.cs" />
+    <Compile Include="Libraries\Models\CryptoCurrencyExtension.cs" />
+    <Compile Include="Libraries\Models\GeneralHelper.cs" />
+    <Compile Include="Libraries\Models\PaymentOnlineType.cs" />
+    <Compile Include="Libraries\Models\RelatedDepositOnlineTypesAttribute.cs" />
     <Compile Include="Libraries\Modules\ConfigType.cs" />
     <Compile Include="Libraries\Modules\ModuleBase.cs" />
     <Compile Include="Libraries\Modules\Singleton.cs" />
     <Compile Include="Libraries\Modules\WithdrawalBankList\BankInfo.cs" />
-    <Compile Include="Libraries\Modules\WithdrawalBankList\CryptoCurrency.cs" />
     <Compile Include="Libraries\Modules\WithdrawalBankList\ModeInfo.cs" />
     <Compile Include="Libraries\Modules\WithdrawalBankList\PaymentEnable.cs" />
     <Compile Include="Libraries\Modules\WithdrawalBankList\PaymentInfoByCurrency.cs" />
@@ -264,7 +268,6 @@
       <DependentUpon>ParserTool.aspx</DependentUpon>
     </Compile>
     <Compile Include="ParseType.cs" />
-    <Compile Include="PaymentOnlineType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

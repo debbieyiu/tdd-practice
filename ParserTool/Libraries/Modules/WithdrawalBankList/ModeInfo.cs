@@ -1,4 +1,6 @@
-﻿namespace ParserTool.Libraries.Modules.WithdrawalBankList
+﻿using ParserTool.Libraries.Models;
+
+namespace ParserTool.Libraries.Modules.WithdrawalBankList
 {
     public class ModeInfo
     {
