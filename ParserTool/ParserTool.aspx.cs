@@ -31,7 +31,7 @@ namespace ParserTool
 
             var withdrawalConfigs = WithdrawalBankListConfigHelper.Instance.Config.PaymentEnable;
             var backgroundItems = withdrawalConfigs
-                //.Where(config => config.PaymentId == "DirePay")
+                .Where(config => config.PaymentId == "XPay")
                 .Select(ConvertToBackgroundItem)
                 .ToList();
 
@@ -70,6 +70,11 @@ namespace ParserTool
             return new List<ConfigsByModeInfo> { configsByModeInfo };
         }
 
+        private static ParseType GetParseType()
+        {
+            return ParseType.WdJson;
+        }
+
         private static ConfigsByModeInfo InitConfigsByModeInfo(
             PaymentEnable config,
             PaymentInfoByCurrency currency,
@@ -81,9 +86,9 @@ namespace ParserTool
                 PaymentId = config.PaymentId,
                 CurrencyId = currency.CurrencyId,
                 ModeId = modeInfo.Id,
-                TargetName = modeInfo.Id.ToString(),
+                TargetName = modeInfo.GetTargetName(config.PaymentId, (Currency)currency.CurrencyId, onlineType),
                 OnlineType = onlineType,
-                ParseType = ParseType.WdJson
+                ParseType = GetParseType()
             };
         }
 

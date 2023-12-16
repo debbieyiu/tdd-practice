@@ -15,7 +15,7 @@ namespace ParserTool
             CurrencyDataList = configsByCurrency
                 .Select(currency => new CurrencyData
                 {
-                    CurrencyId = currency.CurrencyId,
+                    Currency = (Currency)currency.CurrencyId,
                     OnlineTypeDataList = currency.ModeInfoList
                         .GroupBy(info => info.OnlineType)
                         .Select(grouping => new OnlineTypeData

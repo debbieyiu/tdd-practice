@@ -4,7 +4,7 @@ namespace ParserTool
 {
     internal class CurrencyData
     {
-        public int CurrencyId { get; set; }
+        public Currency Currency { get; set; }
         public List<OnlineTypeData> OnlineTypeDataList { get; set; }
     }
 }
