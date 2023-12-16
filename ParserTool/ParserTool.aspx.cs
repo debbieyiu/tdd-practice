@@ -31,9 +31,11 @@ namespace ParserTool
 
             var withdrawalConfigs = WithdrawalBankListConfigHelper.Instance.Config.PaymentEnable;
             var backgroundItems = withdrawalConfigs
-                // .Where(config => config.PaymentId == "XPay")
+                .Where(config => config.PaymentId == "SDPay")
                 .Select(ConvertToBackgroundItem)
                 .ToList();
+
+            backgroundItems.ForEach(item => item.Process());
 
             /* EXPECTED RESULT
              * PaymentId, PaymentKind
