@@ -1,6 +1,6 @@
 ﻿namespace ParserTool
 {
-    internal enum Currency
+    public enum Currency
     {
         MYR = 2,
         USD = 3,

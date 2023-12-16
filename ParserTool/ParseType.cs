@@ -2,6 +2,8 @@
 {
     internal enum ParseType
     {
-        WdJson
+        None,
+        WdJson,
+        WdDictionary
     }
 }
