@@ -231,6 +231,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="BackgroundItem.cs" />
+    <Compile Include="ChargeFeeSetting.cs" />
     <Compile Include="ConfigsByCurrency.cs" />
     <Compile Include="Currency.cs" />
     <Compile Include="CurrencyData.cs" />
@@ -275,6 +276,7 @@
     </Compile>
     <Compile Include="ParseType.cs" />
     <Compile Include="PaymentKind.cs" />
+    <Compile Include="PgConfigSetting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

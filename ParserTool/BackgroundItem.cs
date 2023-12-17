@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Xml;
+using Newtonsoft.Json;
 using ParserTool.Libraries.Models;
 
 namespace ParserTool
@@ -40,6 +42,18 @@ namespace ParserTool
 
         public List<CurrencyData> CurrencyDataList { get; set; }
 
+        public List<Tuple<BackgroundItem, CurrencyData, OnlineTypeData, ModeData>> FlattenItems => CurrencyDataList
+            .SelectMany(
+                bgCurrency => bgCurrency.OnlineTypeDataList,
+                (bgCurrency, bgOnlineType) =>
+                    new { bgCurrency, bgOnlineType })
+            .SelectMany(
+                bgCurrencyOnlineType => bgCurrencyOnlineType.bgOnlineType.ModeDataList,
+                (bgCurrencyOnlineType, bgMode) =>
+                    new Tuple<BackgroundItem, CurrencyData, OnlineTypeData, ModeData>(
+                    this, bgCurrencyOnlineType.bgCurrency, bgCurrencyOnlineType.bgOnlineType, bgMode))
+            .ToList();
+
         public string PaymentId { get; set; }
 
         public PaymentKind PaymentKind { get; set; }
@@ -75,7 +89,27 @@ namespace ParserTool
 
             var settings = node.SelectSingleNode("ChargeFeeSetting").InnerText;
 
-            return new List<PgConfigSetting>();
+            var list = new List<PgConfigSetting>();
+            var parseType = FlattenItems.First().Item4.ParseType;
+            switch (parseType)
+            {
+                case ParseType.None:
+                    break;
+
+                case ParseType.WdJson:
+                    var chargeFeeSetting = JsonConvert.DeserializeObject<ChargeFeeSetting>(settings);
+                    var pgConfigSetting = new PgConfigSetting(targetName, PaymentOnlineType.Online, chargeFeeSetting);
+                    list.Add(pgConfigSetting);
+                    break;
+
+                case ParseType.WdDictionary:
+                    break;
+
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+
+            return list;
         }
 
         private bool GetNonCommonTargetElements(XmlNode arg)
@@ -88,13 +122,5 @@ namespace ParserTool
 
             return false;
         }
-    }
-
-    internal class ChargeFeeSetting
-    {
-    }
-
-    internal class PgConfigSetting
-    {
     }
 }
