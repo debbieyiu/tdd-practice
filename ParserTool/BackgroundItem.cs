@@ -79,6 +79,20 @@ namespace ParserTool
                 .ToList();
         }
 
+        private PgConfigSetting ConvertToPgConfigSetting(KeyValuePair<string, ChargeFeeSetting> pair, string targetName)
+        {
+            var onlineTypeMapper = new Dictionary<string, PaymentOnlineType>
+            {
+                { "USDT-ERC20", PaymentOnlineType.UsdtErc20 },
+                { "USDT-TRC20", PaymentOnlineType.UsdtTrc20 },
+                { "USDC-ERC20", PaymentOnlineType.UsdcErc20 },
+                { "USDC-TRC20", PaymentOnlineType.UsdcTrc20 },
+                { "BTC", PaymentOnlineType.CryptoBtc },
+            };
+
+            return new PgConfigSetting(targetName, onlineTypeMapper[pair.Key], pair.Value);
+        }
+
         private List<PgConfigSetting> ConvertToPgConfigSettings(XmlNode node)
         {
             var targetName = string.Empty;
@@ -87,10 +101,15 @@ namespace ParserTool
                 targetName = result;
             }
 
+            var parseType = FlattenItems.First().Item4.ParseType;
+            if (parseType == ParseType.None)
+            {
+                return new List<PgConfigSetting>();
+            }
+
             var settings = node.SelectSingleNode("ChargeFeeSetting").InnerText;
 
             var list = new List<PgConfigSetting>();
-            var parseType = FlattenItems.First().Item4.ParseType;
             switch (parseType)
             {
                 case ParseType.None:
@@ -103,6 +122,9 @@ namespace ParserTool
                     break;
 
                 case ParseType.WdDictionary:
+                    list = JsonConvert.DeserializeObject<Dictionary<string, ChargeFeeSetting>>(settings)
+                        .Select(pair => ConvertToPgConfigSetting(pair, targetName))
+                        .ToList();
                     break;
 
                 default:

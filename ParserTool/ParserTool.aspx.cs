@@ -31,7 +31,7 @@ namespace ParserTool
 
             var withdrawalConfigs = WithdrawalBankListConfigHelper.Instance.Config.PaymentEnable;
             var backgroundItems = withdrawalConfigs
-                .Where(config => config.PaymentId == "SDPay")
+                //.Where(config => config.PaymentId == "DirePay")
                 .Select(ConvertToBackgroundItem)
                 .ToList();
 
