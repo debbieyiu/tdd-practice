@@ -77,6 +77,26 @@ namespace ParserTool
                 .Select(ConvertToPgConfigSettings)
                 .SelectMany(list => list)
                 .ToList();
+
+            foreach (var currencyData in CurrencyDataList)
+            {
+                foreach (var onlineTypeData in currencyData.OnlineTypeDataList)
+                {
+                    foreach (var modeData in onlineTypeData.ModeDataList)
+                    {
+                        var pgConfigSettings = PgConfigSettings
+                            .Where(setting =>
+                                !setting.IsSet
+                                && setting.TargetName.Equals(modeData.TargetName, StringComparison.OrdinalIgnoreCase)
+                                && setting.OnlineType == onlineTypeData.OnlineType)
+                            .ToList();
+
+                        pgConfigSettings.ForEach(setting => setting.IsSet = true);
+
+                        modeData.ChargeFeeSettings = pgConfigSettings;
+                    }
+                }
+            }
         }
 
         private PgConfigSetting ConvertToPgConfigSetting(KeyValuePair<string, ChargeFeeSetting> pair, string targetName)

@@ -12,6 +12,7 @@ namespace ParserTool
         }
 
         public ChargeFeeSetting ChargeFeeSetting { get; set; }
+        public bool IsSet { get; set; }
         public PaymentOnlineType OnlineType { get; set; }
         public string TargetName { get; set; }
     }
