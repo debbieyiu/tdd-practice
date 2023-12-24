@@ -36,6 +36,11 @@ namespace ParserTool
                 .ToList();
 
             backgroundItems.ForEach(item => item.Process());
+            if (backgroundItems.Any(item => !item.IsValid))
+            {
+                txtResult.Text = "Invalid items exist, please check!";
+                return;
+            }
 
             /* EXPECTED RESULT
              * PaymentId, PaymentKind

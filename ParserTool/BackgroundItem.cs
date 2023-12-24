@@ -54,6 +54,17 @@ namespace ParserTool
                     this, bgCurrencyOnlineType.bgCurrency, bgCurrencyOnlineType.bgOnlineType, bgMode))
             .ToList();
 
+        public bool IsValid
+        {
+            get
+            {
+                var invalidItems = FlattenItems.Where(CheckForInvalid)
+                    .ToList();
+
+                return invalidItems.Count == 0;
+            }
+        }
+
         public string PaymentId { get; set; }
 
         public PaymentKind PaymentKind { get; set; }
@@ -97,6 +108,16 @@ namespace ParserTool
                     }
                 }
             }
+        }
+
+        private bool CheckForInvalid(Tuple<BackgroundItem, CurrencyData, OnlineTypeData, ModeData> tuple)
+        {
+            if (tuple.Item4.ParseType == ParseType.None)
+            {
+                return PgConfigSettings.Count > 0;
+            }
+
+            return false;
         }
 
         private PgConfigSetting ConvertToPgConfigSetting(KeyValuePair<string, ChargeFeeSetting> pair, string targetName)
