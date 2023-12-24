@@ -85,7 +85,7 @@ namespace ParserTool
                 return ParseType.None;
             }
 
-            var wdDictionaryCases = new List<string> { "NewXfuooUsdt", "DirePay" };
+            var wdDictionaryCases = new List<string> { "NewXfuooUsdt", "DirePay", "NewxyPay" };
             if (wdDictionaryCases.Contains(paymentId))
             {
                 return ParseType.WdDictionary;

@@ -74,28 +74,6 @@
 						116600			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
 						116601			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
 						115505			<ChargeFeeSetting>{"BaseFee":2.00}</ChargeFeeSetting>
-		NewxyPay		106601			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-						106400			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-						105805			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-						104208			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-						97709			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-						97401			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-						114202			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-						114302			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-						124904			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-						124905			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-						124906			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-						124907			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-						124908			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-						124909			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
-						114403			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
-						114404			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
-						114405			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
-						114504			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
-						114506			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
-						114609			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
-						114706			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
-						115201			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
 		Paygate10		122902			<ChargeFeeSetting>{"Rate":0.0625}</ChargeFeeSetting>
 		Paykassma		125602			<ChargeFeeSetting>{"Rate":0.04,"ExternalFee":7.00}</ChargeFeeSetting>
 						126208			<ChargeFeeSetting>{"Rate":0.03}</ChargeFeeSetting>
@@ -126,6 +104,28 @@
 == DICTIONARY ==
 	-- name: ModeId -- 
 		NewXfuooUsdt	87803			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":35.00},"USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
+						114403			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
+						114404			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
+						114405			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
+						114504			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
+						114506			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
+						114609			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
+						114706			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
+						115201			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
+		NewxyPay		106601			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
+						106400			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
+						105805			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
+						104208			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
+						97709			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
+						97401			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
+						114202			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
+						114302			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
+						124904			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
+						124905			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
+						124906			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
+						124907			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
+						124908			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
+						124909			<ChargeFeeSetting>{"Online":{"BaseFee":3.00}}</ChargeFeeSetting>
 						114403			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
 						114404			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>
 						114405			<ChargeFeeSetting>{"USDT-ERC20":{"BaseFee":20.00}, "USDT-TRC20":{"BaseFee":2.00}}</ChargeFeeSetting>

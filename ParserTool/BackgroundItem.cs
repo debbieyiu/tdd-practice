@@ -117,6 +117,16 @@ namespace ParserTool
                 return PgConfigSettings.Count > 0;
             }
 
+            if (tuple.Item4.ChargeFeeSettings.Count != 1)
+            {
+                return true;
+            }
+
+            if (PgConfigSettings.Any(setting => !setting.IsSet))
+            {
+                return true;
+            }
+
             return false;
         }
 
@@ -124,6 +134,7 @@ namespace ParserTool
         {
             var onlineTypeMapper = new Dictionary<string, PaymentOnlineType>
             {
+                { "Online", PaymentOnlineType.Online},
                 { "USDT-ERC20", PaymentOnlineType.UsdtErc20 },
                 { "USDT-TRC20", PaymentOnlineType.UsdtTrc20 },
                 { "USDC-ERC20", PaymentOnlineType.UsdcErc20 },
